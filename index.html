@@ -218,10 +218,10 @@
 
 <nav class="nav" aria-label="快速跳轉">
   <a href="#flights">航班</a>
-  <a href="#planA" class="hot">方案 A</a>
-  <a href="#planB">方案 B</a>
+  <a href="#planA" class="hot">行程</a>
   <a href="#planC">雨天版</a>
   <a href="#food">美食</a>
+  <a href="#shops">小店</a>
   <a href="#transport">交通</a>
   <a href="#policy">免稅</a>
   <a href="#budget">預算</a>
@@ -263,19 +263,19 @@
 
   <!-- 方案總覽 -->
   <section id="plans">
-    <div class="sec-head"><span class="no">02</span><h2>三種玩法，投票選一個</h2><span class="en">Choose Your Plan</span></div>
-    <p class="lead">主要差別在「燒肉排中午還是晚上」和「夕陽在哪裡看」。方案 A 行程最順、夕陽最美；方案 B 晚餐吃得最好但時間較緊；下雨就走方案 C。每段交通都附 Google 地圖連結（➤），點開就能導航。</p>
+    <div class="sec-head"><span class="no">02</span><h2>定案行程</h2><span class="en">The Plan</span></div>
+    <p class="lead">大家投票定案：燒肉午餐、波上宮海景、壺屋老街，最後上瀨長島看夕陽收尾——動線由西往東一筆畫，不走回頭路。每段交通都附 Google 地圖連結（➤），點開就能導航。下雨改走下方的雨天備案。</p>
 
     <!-- 方案 A -->
     <article class="plan" id="planA">
       <div class="plan-head">
-        <span class="plan-tag">方案 A</span>
-        <h3>燒肉午餐 × 瀨長島夕陽（推薦）</h3>
-        <span class="for">適合：想看海景夕陽、行程想排最順的人。全程單軌＋TK02 巴士，零計程車。</span>
+        <span class="plan-tag">定案</span>
+        <h3>燒肉午餐 × 波上宮 × 瀨長島夕陽</h3>
+        <span class="for">由西往東一筆畫：吃飽走海邊消食、下午購物有騎樓遮蔭、提早上島悠閒等日落。全程單軌＋TK02 巴士，零計程車。</span>
       </div>
 
       <div class="plan-map">
-        <svg viewBox="0 0 380 305" role="img" aria-label="方案 A 路線圖：機場、縣廳前、首里城、牧志、赤嶺、瀨長島，箭頭標示行進方向">
+        <svg viewBox="0 0 380 305" role="img" aria-label="定案路線圖：機場、縣廳前、波上宮、牧志、壺屋、赤嶺、瀨長島，箭頭標示行進方向">
           <defs>
             <marker id="arw-a" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
               <path d="M0,0 L10,5 L0,10 Z"/>
@@ -290,99 +290,45 @@
           <circle cx="108" cy="215" r="3" class="m-st"/><text x="112" y="228" class="m-lb soft">赤嶺</text>
           <circle cx="168" cy="150" r="4" class="m-st"/><text x="118" y="141" class="m-lb">縣廳前</text>
           <circle cx="220" cy="114" r="3.5" class="m-st"/><text x="226" y="108" class="m-lb">牧志</text>
-          <circle cx="322" cy="100" r="4" class="m-st"/><text x="332" y="98" class="m-lb">首里</text>
-          <rect x="326" y="122" width="9" height="9" class="m-poi" transform="rotate(45 330 126)"/><text x="340" y="132" class="m-lb">首里城</text>
-          <rect x="212" y="126" width="8" height="8" class="m-poi" transform="rotate(45 216 130)"/><text x="222" y="152" class="m-lb soft">牧志市場</text>
+          <circle cx="322" cy="100" r="4" class="m-st"/><text x="332" y="98" class="m-lb soft">首里</text>
+          <rect x="126" y="96" width="9" height="9" class="m-poi" transform="rotate(45 130 100)"/><text x="102" y="88" class="m-lb">波上宮</text>
+          <rect x="212" y="126" width="8" height="8" class="m-poi" transform="rotate(45 216 130)"/><text x="178" y="166" class="m-lb soft">牧志市場</text>
+          <rect x="258" y="142" width="8" height="8" class="m-poi" transform="rotate(45 262 146)"/><text x="272" y="150" class="m-lb">壺屋</text>
           <text x="60" y="290" class="m-lb">瀨長島</text>
           <text x="14" y="120" class="m-lb soft">東海</text>
           <path class="rA" d="M84,203 C114,211 140,196 160,160" marker-end="url(#arw-a)"/>
-          <path class="rA" d="M176,146 C230,138 280,128 316,112" marker-end="url(#arw-a)"/>
-          <path class="rA" d="M324,134 C300,192 260,188 228,142" marker-end="url(#arw-a)"/>
-          <path class="rA" d="M208,130 C166,148 134,178 115,206" marker-end="url(#arw-a)"/>
+          <path class="rA" d="M163,141 C152,128 146,118 139,110" marker-end="url(#arw-a)"/>
+          <path class="rA" d="M139,103 C170,106 192,113 205,122" marker-end="url(#arw-a)"/>
+          <path class="rA" d="M226,133 C238,138 245,141 251,143" marker-end="url(#arw-a)"/>
+          <path class="rA" d="M258,152 C210,192 150,206 118,211" marker-end="url(#arw-a)"/>
           <path class="rA" d="M103,222 C96,238 92,248 90,256" marker-end="url(#arw-a)"/>
           <path class="rA" d="M74,258 C68,240 68,226 74,214" marker-end="url(#arw-a)"/>
-          <g class="stepA"><circle cx="122" cy="203" r="8"/><text x="122" y="206.5">1</text></g>
-          <g class="stepA"><circle cx="248" cy="124" r="8"/><text x="248" y="127.5">2</text></g>
-          <g class="stepA"><circle cx="286" cy="178" r="8"/><text x="286" y="181.5">3</text></g>
-          <g class="stepA"><circle cx="148" cy="168" r="8"/><text x="148" y="171.5">4</text></g>
-          <g class="stepA"><circle cx="107" cy="243" r="8"/><text x="107" y="246.5">5</text></g>
-          <g class="stepA"><circle cx="58" cy="234" r="8"/><text x="58" y="237.5">6</text></g>
+          <g class="stepA"><circle cx="126" cy="184" r="8"/><text x="126" y="187.5">1</text></g>
+          <g class="stepA"><circle cx="164" cy="120" r="8"/><text x="164" y="123.5">2</text></g>
+          <g class="stepA"><circle cx="176" cy="96" r="8"/><text x="176" y="99.5">3</text></g>
+          <g class="stepA"><circle cx="240" cy="126" r="8"/><text x="240" y="129.5">4</text></g>
+          <g class="stepA"><circle cx="182" cy="204" r="8"/><text x="182" y="207.5">5</text></g>
+          <g class="stepA"><circle cx="107" cy="243" r="8"/><text x="107" y="246.5">6</text></g>
+          <g class="stepA"><circle cx="58" cy="234" r="8"/><text x="58" y="237.5">7</text></g>
         </svg>
         <p class="cap">
-          <span><span class="sw"></span>行進路線（1→6）</span>
+          <span><span class="sw"></span>行進路線（1→7）</span>
           <span><span class="sw rail"></span>單軌電車</span>
-          <span>1 午餐燒肉 → 2 首里城 → 3 牧志購物 → 4 赤嶺轉巴士 → 5 瀨長島夕陽 → 6 回機場</span>
+          <span>1 午餐燒肉 → 2 波上宮 → 3 牧志市場 → 4 壺屋老街 → 5 赤嶺轉巴士 → 6 瀨長島夕陽 → 7 回機場</span>
         </p>
       </div>
-      <a class="gmap-all" href="https://www.google.com/maps/dir/那覇空港/焼肉もとぶ牧場+那覇店/首里城公園/第一牧志公設市場/瀬長島ウミカジテラス/那覇空港国際線ターミナル" target="_blank" rel="noopener">在 Google 地圖開啟方案 A 全程路線 ↗</a>
+      <a class="gmap-all" href="https://www.google.com/maps/dir/那覇空港/焼肉もとぶ牧場+那覇店/波上宮/第一牧志公設市場/壺屋やちむん通り/瀬長島ウミカジテラス/那覇空港国際線ターミナル" target="_blank" rel="noopener">在 Google 地圖開啟全程路線 ↗</a>
 
       <ul class="timeline">
         <li><span class="tt">09:20</span><span class="nd"></span><span class="tx"><b>抵達那霸機場</b><br><span class="how">Visit Japan Web QR 入境，約 10:15 出關；機場站買單軌一日券 ¥1,000</span></span></li>
         <li><span class="tt">10:35</span><span class="nd"></span><span class="tx"><b>縣廳前站・國際通西段散步</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=那覇空港駅&destination=県庁前駅&travelmode=transit" target="_blank" rel="noopener">地圖</a><br><span class="how">單軌約 13 分；順便看看 10/10 那霸大綱挽的宣傳布置</span></span></li>
         <li class="meal"><span class="tt">11:30</span><span class="nd"></span><span class="tx"><b>午餐：燒肉本部牧場 那霸店</b>（需預約）<a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=県庁前駅&destination=焼肉もとぶ牧場+那覇店&travelmode=walking" target="_blank" rel="noopener">地圖</a><br><span class="how">縣廳前站步行 2 分；牧場直營沖繩黑毛和牛「本部牛」，午餐套餐 ¥1,900 起</span></span></li>
-        <li><span class="tt">13:15</span><span class="nd"></span><span class="tx"><b>首里城公園</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=県庁前駅&destination=首里城公園&travelmode=transit" target="_blank" rel="noopener">地圖</a><br><span class="how">單軌至首里站＋步行 15 分；正殿 11/23 才開放入內，這天看全新朱紅外觀與展望台，收費區 ¥400（出示一日券 ¥320）</span></span></li>
-        <li><span class="tt">15:20</span><span class="nd"></span><span class="tx"><b>牧志公設市場・平和通・國際通購物</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=首里城公園&destination=第一牧志公設市場&travelmode=transit" target="_blank" rel="noopener">地圖</a><br><span class="how">單軌至牧志站；免稅為舊制，出示護照結帳直接免稅（同店稅前滿 ¥5,000）</span></span></li>
-        <li><span class="tt">16:45</span><span class="nd"></span><span class="tx"><b>前往瀨長島</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=牧志駅&destination=赤嶺駅&travelmode=transit" target="_blank" rel="noopener">單軌</a><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=赤嶺駅&destination=瀬長島ウミカジテラス&travelmode=transit" target="_blank" rel="noopener">TK02</a><br><span class="how">單軌至赤嶺站，南口轉東京巴士 TK02（¥150，約 12 分）。平日無機場直達班次</span></span></li>
-        <li><span class="tt">17:30</span><span class="nd"></span><span class="tx"><b>瀨長島 Umikaji Terrace・18:10 看夕陽</b><br><span class="how">白色階梯商店街、飛機低空起降；小吃：きじむなぁ塔可飯、鮪魚丼</span></span></li>
+        <li><span class="tt">13:00</span><span class="nd"></span><span class="tx"><b>波上宮・波之上海灘</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=焼肉もとぶ牧場+那覇店&destination=波上宮&travelmode=walking" target="_blank" rel="noopener">地圖</a><br><span class="how">步行約 15 分；那霸市區唯一蓋在海崖上的神社，拍照散步剛好消食</span></span></li>
+        <li><span class="tt">14:15</span><span class="nd"></span><span class="tx"><b>牧志公設市場・平和通購物</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=波上宮&destination=第一牧志公設市場&travelmode=walking" target="_blank" rel="noopener">地圖</a><br><span class="how">沿國際通往東逛回來約 20 分；免稅為舊制，出示護照結帳直接免稅（同店稅前滿 ¥5,000）</span></span></li>
+        <li><span class="tt">15:30</span><span class="nd"></span><span class="tx"><b>壺屋やちむん通り</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=第一牧志公設市場&destination=壺屋やちむん通り&travelmode=walking" target="_blank" rel="noopener">地圖</a><br><span class="how">市場旁步行 5 分；石板路陶器老街，挑個琉球陶杯當紀念（陶瓷博物館整修中，街上店家有開）</span></span></li>
+        <li><span class="tt">16:25</span><span class="nd"></span><span class="tx"><b>前往瀨長島</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=牧志駅&destination=赤嶺駅&travelmode=transit" target="_blank" rel="noopener">單軌</a><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=赤嶺駅&destination=瀬長島ウミカジテラス&travelmode=transit" target="_blank" rel="noopener">TK02</a><br><span class="how">牧志站單軌約 15 分到赤嶺站，南口轉 16:55 的東京巴士 TK02（¥150，約 12 分）。平日無機場直達班次</span></span></li>
+        <li><span class="tt">17:10</span><span class="nd"></span><span class="tx"><b>瀨長島 Umikaji Terrace・18:10 看夕陽</b><br><span class="how">整整一小時逛白色階梯商店街、看飛機低空起降；小吃：きじむなぁ塔可飯、鮪魚丼</span></span></li>
         <li><span class="tt">18:23</span><span class="nd"></span><span class="tx"><b>TK02 直達那霸機場</b>（備案 18:58 班次）<a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=瀬長島ウミカジテラス&destination=那覇空港国際線ターミナル&travelmode=transit" target="_blank" rel="noopener">地圖</a><br><span class="how">¥250、約 20 分；18:43 抵達機場，報到出境後可在管制區休息</span></span></li>
-        <li><span class="tt">21:40</span><span class="nd"></span><span class="tx"><b>IT233 起飛 → 22:10 回桃園</b></span></li>
-      </ul>
-    </article>
-
-    <!-- 方案 B -->
-    <article class="plan alt" id="planB">
-      <div class="plan-head">
-        <span class="plan-tag">方案 B</span>
-        <h3>燒肉晚餐 × 波上宮夕陽</h3>
-        <span class="for">適合：晚餐想吃頂級燒肉套餐（¥6,900 起）的人。捨棄瀨長島，時間比 A 緊，回程班機延誤風險要多留意。</span>
-      </div>
-
-      <div class="plan-map">
-        <svg viewBox="0 0 380 305" role="img" aria-label="方案 B 路線圖：機場、首里城、牧志、波上宮、縣廳前，箭頭標示行進方向">
-          <defs>
-            <marker id="arw-b" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-              <path d="M0,0 L10,5 L0,10 Z"/>
-            </marker>
-          </defs>
-          <rect x="0" y="0" width="380" height="305" class="m-land"/>
-          <path class="m-sea" d="M0,0 L55,0 C48,60 52,120 62,180 C66,205 50,235 58,260 L120,305 L0,305 Z"/>
-          <ellipse cx="82" cy="266" rx="15" ry="10" class="m-land" stroke="var(--map-rail)" stroke-width="1"/>
-          <path class="m-rail" d="M78,205 L108,215 L145,172 L168,150 L192,130 L220,114 L244,80 Q292,58 322,100"/>
-          <text x="252" y="52" class="m-lb soft">ゆいレール 單軌</text>
-          <circle cx="78" cy="205" r="4" class="m-st"/><text x="30" y="196" class="m-lb">那霸機場</text>
-          <circle cx="168" cy="150" r="4" class="m-st"/><text x="178" y="166" class="m-lb">縣廳前</text>
-          <circle cx="220" cy="114" r="3.5" class="m-st"/><text x="226" y="108" class="m-lb">牧志</text>
-          <circle cx="322" cy="100" r="4" class="m-st"/><text x="332" y="98" class="m-lb">首里</text>
-          <rect x="326" y="122" width="9" height="9" class="m-poi" transform="rotate(45 330 126)"/><text x="340" y="132" class="m-lb">首里城</text>
-          <rect x="126" y="96" width="9" height="9" class="m-poi" transform="rotate(45 130 100)"/><text x="104" y="90" class="m-lb">波上宮</text>
-          <text x="60" y="290" class="m-lb soft">瀨長島</text>
-          <text x="14" y="120" class="m-lb soft">東海</text>
-          <path class="rB" d="M84,199 C150,148 250,96 312,106" marker-end="url(#arw-b)"/>
-          <path class="rB" d="M323,133 C296,158 258,146 231,121" marker-end="url(#arw-b)"/>
-          <path class="rB" d="M211,110 C185,101 162,97 143,99" marker-end="url(#arw-b)"/>
-          <path class="rB" d="M131,108 C140,122 150,132 159,140" marker-end="url(#arw-b)"/>
-          <path class="rB" d="M161,159 C130,183 100,197 88,202" marker-end="url(#arw-b)"/>
-          <g class="stepB"><circle cx="188" cy="128" r="8"/><text x="188" y="131.5">1</text></g>
-          <g class="stepB"><circle cx="280" cy="152" r="8"/><text x="280" y="155.5">2</text></g>
-          <g class="stepB"><circle cx="176" cy="94" r="8"/><text x="176" y="97.5">3</text></g>
-          <g class="stepB"><circle cx="136" cy="126" r="8"/><text x="136" y="129.5">4</text></g>
-          <g class="stepB"><circle cx="120" cy="186" r="8"/><text x="120" y="189.5">5</text></g>
-        </svg>
-        <p class="cap">
-          <span><span class="sw o"></span>行進路線（1→5）</span>
-          <span><span class="sw rail"></span>單軌電車</span>
-          <span>1 首里城 → 2 牧志午餐購物 → 3 波上宮夕陽 → 4 縣廳前燒肉晚餐 → 5 回機場</span>
-        </p>
-      </div>
-      <a class="gmap-all" href="https://www.google.com/maps/dir/那覇空港/首里城公園/第一牧志公設市場/波上宮/焼肉もとぶ牧場+那覇店/那覇空港国際線ターミナル" target="_blank" rel="noopener">在 Google 地圖開啟方案 B 全程路線 ↗</a>
-
-      <ul class="timeline">
-        <li><span class="tt">10:20</span><span class="nd"></span><span class="tx"><b>單軌直奔首里城</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=那覇空港駅&destination=首里城公園&travelmode=transit" target="_blank" rel="noopener">地圖</a><br><span class="how">機場站買一日券後直達首里站，約 30 分</span></span></li>
-        <li class="meal"><span class="tt">12:30</span><span class="nd"></span><span class="tx"><b>午餐：牧志公設市場 2 樓食堂 或 首里そば</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=首里城公園&destination=首里そば&travelmode=walking" target="_blank" rel="noopener">首里そば</a><br><span class="how">首里そば 11:30 開門、賣完收攤、只收現金；想吃就得排在午餐第一波</span></span></li>
-        <li><span class="tt">13:30</span><span class="nd"></span><span class="tx"><b>牧志市場・平和通・國際通購物</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=首里駅&destination=第一牧志公設市場&travelmode=transit" target="_blank" rel="noopener">地圖</a><br><span class="how">整個下午慢慢逛，含 DFS（單軌おもろまち站，週三營業至 21:00）</span></span></li>
-        <li><span class="tt">17:30</span><span class="nd"></span><span class="tx"><b>波上宮・波之上海灘看 18:10 日落</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=県庁前駅&destination=波上宮&travelmode=walking" target="_blank" rel="noopener">地圖</a><br><span class="how">縣廳前站步行約 15 分；那霸市區唯一海濱神社，紅色本殿立於崖上</span></span></li>
-        <li class="meal"><span class="tt">18:30</span><span class="nd"></span><span class="tx"><b>晚餐：燒肉本部牧場 或 琉球の牛</b>（需預約）<a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=波上宮&destination=焼肉もとぶ牧場+那覇店&travelmode=walking" target="_blank" rel="noopener">地圖</a><br><span class="how">兩家都在縣廳前—牧志之間；套餐 ¥4,000–8,400，60–70 分鐘內吃完</span></span></li>
-        <li><span class="tt">19:40</span><span class="nd"></span><span class="tx"><b>縣廳前站單軌回機場</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=県庁前駅&destination=那覇空港駅&travelmode=transit" target="_blank" rel="noopener">地圖</a><br><span class="how">約 13 分，19:55 抵達；這是壓線時間，餐廳務必準時離開</span></span></li>
         <li><span class="tt">21:40</span><span class="nd"></span><span class="tx"><b>IT233 起飛 → 22:10 回桃園</b></span></li>
       </ul>
     </article>
@@ -392,7 +338,7 @@
       <div class="plan-head">
         <span class="plan-tag">方案 C</span>
         <h3>雨天備案・室內版</h3>
-        <span class="for">下雨或颱風外圍環流：取消首里城戶外區與瀨長島，改走騎樓與室內。動線都在單軌沿線，不需要路線圖。</span>
+        <span class="for">下雨或颱風外圍環流：取消波上宮與瀨長島，改走騎樓與室內。動線都在單軌沿線，不需要路線圖。</span>
       </div>
       <a class="gmap-all" href="https://www.google.com/maps/dir/那覇空港/焼肉もとぶ牧場+那覇店/第一牧志公設市場/Tギャラリア沖縄+by+DFS/しゃぶしゃぶ我那覇豚肉店+前島本店/那覇空港" target="_blank" rel="noopener">在 Google 地圖開啟方案 C 全程路線 ↗</a>
       <ul class="timeline">
@@ -458,7 +404,7 @@
           <dt>時間</dt><dd>11:30–14:00，賣完即收（週四・日休）</dd>
           <dt>價位</dt><dd>¥600–1,000，只收現金</dd>
         </dl>
-        <p class="r-note">方案 B 午餐選項，配首里城剛好。不接受預約，開門前到最保險。</p>
+        <p class="r-note">定案行程沒排首里這區，屬於「專程去才吃得到」的名店，資訊留著給下次。不接受預約，開門前到最保險。</p>
       </div>
       <div class="r-card">
         <div class="r-top"><h3>ポーたま 牧志市場店</h3><span class="badge walkin">免預約</span></div>
@@ -484,13 +430,52 @@
     </div>
   </section>
 
+  <!-- 國際通小店 -->
+  <section id="shops">
+    <div class="sec-head"><span class="no">04</span><h2>國際通小店地圖</h2><span class="en">Shop Guide</span></div>
+    <p class="lead">16 間特色店鋪，按逛街動線分四區：從平和通出發，順著櫻坂通、浮島通一路逛回主街。文創挖寶集中在浮島通，趕時間就直攻主街兩大店。</p>
+
+    <h3 style="font-family:'Noto Serif TC',serif; font-size:17px; margin:18px 0 12px; color:var(--sea-deep);">平和通商圈｜在地風情與主題選物</h3>
+    <div class="grid2">
+      <div class="r-card"><div class="r-top"><h3>平良窗簾專賣店（平良カーテン）</h3></div><p class="r-note" style="border-top:none; padding-top:0;">在地經營的窗簾與家居布飾專門店。有少見的沖繩特色圖樣與配色，可以親手摸材質、確認尺寸，適合想把日式或沖繩氛圍帶回家的人。</p></div>
+      <div class="r-card"><div class="r-top"><h3>原創風獅爺路邊攤</h3></div><p class="r-note" style="border-top:none; padding-top:0;">以沖繩象徵「風獅爺」為題的原創小店。手工感十足的吊飾、鑰匙圈、手機掛繩，結合編織與壓克力元素，掛繩還能自由搭配貓咪等配件，不制式。</p></div>
+      <div class="r-card"><div class="r-top"><h3>Mishi Carnival</h3><span class="badge book">不收現金</span></div><p class="r-note" style="border-top:none; padding-top:0;">結合美食、酒場與沖繩元素的複合式空間，全店鮮紅色可口可樂主題、視覺衝擊力強，有戶外可樂主題座位區。適合晚間放鬆喝一杯。</p></div>
+      <div class="r-card"><div class="r-top"><h3>嘉數商會</h3></div><p class="r-note" style="border-top:none; padding-top:0;">貓咪主題原創設計店，商品圖樣都以店主自家貓咪為原型。服飾與包袋有強烈個人創作風格，貓奴必訪口袋名單。</p></div>
+      <div class="r-card"><div class="r-top"><h3>復古玩具雜貨選物店</h3></div><p class="r-note" style="border-top:none; padding-top:0;">一整面散裝扭蛋＋稀有復古 IP 周邊（任天堂舊卡帶等），還有漢堡造型家具、美式日式復古鐵牌。部分商品價格較高。</p></div>
+    </div>
+
+    <h3 style="font-family:'Noto Serif TC',serif; font-size:17px; margin:22px 0 12px; color:var(--sea-deep);">櫻坂通（希望之丘）｜藝文與手作工藝</h3>
+    <div class="grid2">
+      <div class="r-card"><div class="r-top"><h3>櫻坂劇場</h3></div><p class="r-note" style="border-top:none; padding-top:0;">結合電影與藝文的文化空間：放映藝術電影、獨立電影與紀錄片，館內書店賣設計、藝術、生活風格書籍，還有大量 DVD 可以挖。</p></div>
+      <div class="r-card"><div class="r-top"><h3>琉球張子（豐永盛人工作室）</h3></div><p class="r-note" style="border-top:none; padding-top:0;">知名藝術家豐永盛人的工藝工作室，用沖繩傳統紙糊工藝「張子」創作。麻雀飯糰、土司鴿子等作品幽默又有辨識度，是很特別的沖繩紀念品。</p></div>
+      <div class="r-card"><div class="r-top"><h3>Ta</h3><span class="badge closed">先確認營業</span></div><p class="r-note" style="border-top:none; padding-top:0;">國際通附近的玩具收藏名店，空間不大但收藏豐富，是玩具收藏家的尋寶熱點。曾遇臨時公休，前往前先確認營業時間。</p></div>
+    </div>
+
+    <h3 style="font-family:'Noto Serif TC',serif; font-size:17px; margin:22px 0 12px; color:var(--sea-deep);">浮島通｜潮流與文創秘密基地</h3>
+    <div class="grid2">
+      <div class="r-card"><div class="r-top"><h3>Euphonica</h3></div><p class="r-note" style="border-top:none; padding-top:0;">高質感服飾與器物選物店。精緻杯盤陶瓷之外，主力是高品質日系服飾，包包、耳環、項鍊都很有個性。價格帶偏高，適合追求質感的人。</p></div>
+      <div class="r-card"><div class="r-top"><h3>三村用品店（Mimura Yohinten）</h3></div><p class="r-note" style="border-top:none; padding-top:0;">以獨特手繪創作聞名的文創店，招牌是「客製化手繪人偶」（需關注 IG 預約）。手繪明信片、貼紙、小磁鐵低至 ¥100，平價又有創作者的溫度。</p></div>
+      <div class="r-card"><div class="r-top"><h3>Gisagaso</h3></div><p class="r-note" style="border-top:none; padding-top:0;">充滿驚喜的雜貨挖寶店，復古有趣的小物是特色：Orion 啤酒箱模型、哆啦 A 夢音響等，價格很有競爭力，值得花時間慢慢翻。</p></div>
+      <div class="r-card"><div class="r-top"><h3>浮島商店</h3></div><p class="r-note" style="border-top:none; padding-top:0;">以琴酒（Gin）為主題的酒類專門店，選品堅持、包裝設計如藝術品。現場不提供試飲，但對精釀酒收藏者吸引力極高。</p></div>
+      <div class="r-card"><div class="r-top"><h3>Snoopy Surf Shop</h3></div><p class="r-note" style="border-top:none; padding-top:0;">史努比 × 沖繩衝浪潛水文化的限定商店，限定服飾、包包、潛水用品，史努比粉絲的「危險區域」，錢包自己看好。</p></div>
+      <div class="r-card"><div class="r-top"><h3>琉球 Piras（琉球ぴらす）</h3></div><p class="r-note" style="border-top:none; padding-top:0;">與多位創作者合作的設計服飾品牌，把沖繩文化、風景與在地生活畫進 T-shirt。每件衣服都有故事，辨識度高、不易撞衫。</p></div>
+    </div>
+
+    <h3 style="font-family:'Noto Serif TC',serif; font-size:17px; margin:22px 0 12px; color:var(--sea-deep);">國際通主街｜一站式便利購物</h3>
+    <div class="grid2">
+      <div class="r-card"><div class="r-top"><h3>Bic Camera Select</h3><span class="badge walkin">可退稅</span></div><p class="r-note" style="border-top:none; padding-top:0;">今年新開的小型家電選品店，專為外國遊客設計：精選熱銷家電（如 Panasonic 高 CP 值吹風機），貨量足、價格有時比連鎖藥妝店漂亮，還賣洋酒與伴手禮方便湊免稅額。</p></div>
+      <div class="r-card"><div class="r-top"><h3>唐吉訶德 國際通店</h3><span class="badge walkin">可退稅</span></div><p class="r-note" style="border-top:none; padding-top:0;">B1 到 4 樓的完整大店：<b>B1</b> 全日本伴手禮（北海道、東京、九州土產）／<b>1F</b> 沖繩限定（曬黑版 Hello Kitty、Chiikawa 與沖繩零食）／<b>2F</b> 美妝保養（部分品牌較便宜，記得搭優惠券）／<b>3F</b> 玩具雜貨 IP 商品／<b>4F</b> 藥品。不一定最低價，但趕時間可以一站湊免稅。</p></div>
+    </div>
+    <div class="notice" style="margin-top:18px;">逛街建議：國際通周邊範圍很大，這趟一日遊排在 14:15–16:25 的購物段，建議鎖定平和通＋浮島通挑 3–5 間逛；主街的唐吉訶德和 Bic Camera 留到最後快速掃貨湊免稅。</div>
+  </section>
+
   <!-- 交通 -->
   <section id="transport">
-    <div class="sec-head"><span class="no">04</span><h2>當地交通</h2><span class="en">Getting Around</span></div>
+    <div class="sec-head"><span class="no">05</span><h2>當地交通</h2><span class="en">Getting Around</span></div>
     <div class="cards">
       <div class="card">
         <h3>單軌電車一日券 ¥1,000</h3>
-        <p>購買後 24 小時內全線不限次數搭乘，機場站售票機直接買。首里城收費區出示可折為 ¥320。機場→縣廳前約 13 分、→牧志約 16 分、→首里約 30 分。</p>
+        <p>購買後 24 小時內全線不限次數搭乘，機場站售票機直接買。機場→縣廳前約 13 分、→牧志約 16 分。這版行程其實只搭 2 段單軌（合計約 ¥600），刷單程票比一日券便宜；怕麻煩或想臨時多跑點再買一日券。</p>
       </div>
       <div class="card">
         <h3>東京巴士 TK02（瀨長島線）</h3>
@@ -506,7 +491,7 @@
 
   <!-- 購物政策 / 活動 -->
   <section id="policy">
-    <div class="sec-head"><span class="no">05</span><h2>免稅・政策・當天活動</h2><span class="en">Good to Know</span></div>
+    <div class="sec-head"><span class="no">06</span><h2>免稅・政策・當天活動</h2><span class="en">Good to Know</span></div>
     <div class="t-wrap">
       <table>
         <tr><th>項目</th><th>10/7 當天的狀態</th></tr>
@@ -521,28 +506,27 @@
 
   <!-- 預算 -->
   <section id="budget">
-    <div class="sec-head"><span class="no">06</span><h2>預算（每人）</h2><span class="en">Budget</span></div>
+    <div class="sec-head"><span class="no">07</span><h2>預算（每人）</h2><span class="en">Budget</span></div>
     <div class="t-wrap">
       <table>
         <tr><th>項目</th><th class="num">日圓</th><th class="num">約合新台幣</th></tr>
         <tr><td>機票（虎航來回含稅，僅手提行李）</td><td class="num">—</td><td class="num">8,878</td></tr>
         <tr><td>台北 ⇄ 桃園機場（凌晨＋深夜車資）</td><td class="num">—</td><td class="num">1,500–2,500</td></tr>
-        <tr><td>單軌一日券＋TK02 巴士</td><td class="num">¥1,400–1,600</td><td class="num">300–340</td></tr>
-        <tr><td>首里城收費區（一日券折扣）</td><td class="num">¥320</td><td class="num">70</td></tr>
-        <tr><td>燒肉午餐（方案 A）</td><td class="num">¥2,500–4,000</td><td class="num">530–840</td></tr>
+        <tr><td>單軌（2 段）＋TK02 巴士</td><td class="num">¥1,000–1,400</td><td class="num">210–300</td></tr>
+        <tr><td>燒肉午餐（本部牧場）</td><td class="num">¥2,500–4,000</td><td class="num">530–840</td></tr>
         <tr><td>晚餐＋小吃</td><td class="num">¥2,500–3,500</td><td class="num">530–740</td></tr>
-        <tr><td><b>合計（不含購物）</b></td><td class="num"><b>—</b></td><td class="num"><b>約 11,800–13,400</b></td></tr>
+        <tr><td><b>合計（不含購物）</b></td><td class="num"><b>—</b></td><td class="num"><b>約 11,600–13,300</b></td></tr>
       </table>
     </div>
-    <p class="lead" style="margin-top:10px;">匯率以 ¥1 ≈ NT$0.21 估算。方案 B 晚餐改吃 ¥6,900–8,400 套餐約再加 NT$900–1,300。現金備 ¥10,000–15,000（首里そば、市場攤販只收現金）。</p>
+    <p class="lead" style="margin-top:10px;">匯率以 ¥1 ≈ NT$0.21 估算。現金備 ¥10,000–15,000（市場攤販、部分小店只收現金）。</p>
   </section>
 
   <!-- 行前清單 -->
   <section id="checklist">
-    <div class="sec-head"><span class="no">07</span><h2>行前待辦</h2><span class="en">Checklist</span></div>
+    <div class="sec-head"><span class="no">08</span><h2>行前待辦</h2><span class="en">Checklist</span></div>
     <ul class="check">
       <li><b>下訂機票</b>：官網已確認 10/7 IT230 06:50 去／IT233 21:40 回、來回含稅 NT$8,878——人數確定就買，可加購延誤險。</li>
-      <li><b>訂燒肉</b>：方案定案後，用 TableCheck 訂本部牧場（A 案 11:30／B 案 18:30），並存電話 098-943-3897，出發前一週確認當天有開。</li>
+      <li><b>訂燒肉</b>：用 TableCheck 訂本部牧場 10/7 的 11:30，並存電話 098-943-3897，出發前一週確認當天有開（不定休）。</li>
       <li><b>Visit Japan Web</b>：入境＋海關資料填好、QR 截圖；eSIM 或漫遊開通。</li>
       <li><b>約凌晨車</b>：預約 03:45 左右從台北出發的計程車／叫車；回程若延誤到午夜，機捷已收班，備好叫車方案。</li>
       <li><b>核對 TK02 時刻</b>：出發前開東京巴士沖繩官網最新平日時刻表 PDF。</li>
@@ -553,7 +537,7 @@
 
   <footer class="foot">
     <p>資料查證至 2026/9/25：IT233 時刻與票價已於虎航官網確認（21:40／來回含稅 NT$8,878）；TK02 班次為約 2026 年 5 月資料、餐廳營業時間綜合官網／Tabelog／Hot Pepper。出發前請再確認：TK02 最新時刻表、本部牧場當日營業（不定休）。</p>
-    <p>路線圖為示意圖，非實際比例；各段路線請點「➤ 地圖」開啟 Google 地圖導航。首里城正殿內部 2026/11/23 起開放；牧志公設市場公休為每月第四個週日（10/25），10/7 正常營業。</p>
+    <p>路線圖為示意圖，非實際比例；各段路線請點「➤ 地圖」開啟 Google 地圖導航。牧志公設市場公休為每月第四個週日（10/25），10/7 正常營業；壺屋陶瓷博物館整修休館中，但やちむん通り街上店家正常營業。</p>
   </footer>
 </div>
 </body>
