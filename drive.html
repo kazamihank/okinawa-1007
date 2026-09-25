@@ -3,207 +3,266 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>沖繩自駕一日行｜2026.10.07</title>
+<title>沖繩自駕一日行</title>
 <meta name="description" content="2026/10/7 台北—那霸虎航當天來回自駕版：租車重點、中部海岸線路線圖、石垣牛燒肉、瀨長島夕陽">
-<meta name="theme-color" content="#06344c">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<meta name="theme-color" content="#EA580C">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap">
 <style>
+  /* ===== ui-ux-pro-max design system: Aurora UI / Adventure orange + map teal ===== */
   :root{
-    --sea-deep:#07425f; --sea:#0b7a99; --sunset:#e56b32; --coral:#c8452c;
-    --sand:#f6f2e8; --paper:#fffdf8; --ink:#22333c; --ink-soft:#5b6d76;
-    --line:#dcd4c2; --ok:#2c7a4b; --badge-bg:#fdeee3;
-    --map-sea:#d7eaf0; --map-land:#f3eee1; --map-rail:#9aa8ad;
-    --shadow:0 2px 10px rgba(34,51,60,.08);
+    --color-primary:#EA580C; --color-on-primary:#FFFFFF;
+    --color-secondary:#0891B2; --color-on-secondary:#FFFFFF;
+    --color-accent:#D97706;
+    --color-background:#FFF7ED; --color-foreground:#0F172A;
+    --color-card:#FFFFFF; --color-card-foreground:#0F172A;
+    --color-muted:#FDF4F0; --color-muted-foreground:#475569;
+    --color-border:#FCEAE1;
+    --color-destructive:#DC2626; --color-on-destructive:#FFFFFF;
+    --color-ring:#EA580C;
+    --ok:#15803D;
+    --map-sea:#CFF0F6; --map-land:#FEF3E6; --map-rail:#94A3B8;
+    --shadow-1:0 1px 3px rgba(15,23,42,.06),0 4px 14px rgba(234,88,12,.07);
+    --shadow-2:0 4px 10px rgba(15,23,42,.08),0 12px 32px rgba(234,88,12,.12);
+    --r-lg:20px; --r-md:14px; --r-sm:10px;
+    --sp-1:8px; --sp-2:16px; --sp-3:24px; --sp-4:32px; --sp-6:48px; --sp-8:64px;
   }
   @media (prefers-color-scheme: dark){
     :root{
-      --sea-deep:#9fd4e8; --sea:#5fb6cf; --sunset:#f28b52; --coral:#f08a75;
-      --sand:#131c21; --paper:#1b262d; --ink:#e8e4d8; --ink-soft:#a3b1b8;
-      --line:#33424b; --ok:#6fc491; --badge-bg:#3a2a20;
-      --map-sea:#0f2b36; --map-land:#22303a; --map-rail:#5a6b73;
-      --shadow:0 2px 10px rgba(0,0,0,.4);
+      --color-primary:#FB923C; --color-on-primary:#1A0D02;
+      --color-secondary:#22D3EE; --color-on-secondary:#03252B;
+      --color-accent:#FBBF24;
+      --color-background:#0B1220; --color-foreground:#E7EDF5;
+      --color-card:#141C2E; --color-card-foreground:#E7EDF5;
+      --color-muted:#1B2437; --color-muted-foreground:#9FB0C3;
+      --color-border:#26324A;
+      --color-destructive:#F87171; --color-on-destructive:#2B0707;
+      --color-ring:#FB923C;
+      --ok:#4ADE80;
+      --map-sea:#0E2A38; --map-land:#1A2233; --map-rail:#5B6B80;
+      --shadow-1:0 1px 3px rgba(0,0,0,.5),0 4px 14px rgba(0,0,0,.35);
+      --shadow-2:0 4px 10px rgba(0,0,0,.5),0 16px 40px rgba(0,0,0,.45);
       color-scheme: dark;
     }
   }
 
   html{scroll-behavior:smooth;}
+  *{box-sizing:border-box;}
   body{
-    margin:0; background:var(--sand); color:var(--ink);
-    font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
-    font-size:15px; line-height:1.75;
+    margin:0; background:var(--color-background); color:var(--color-foreground);
+    font-family:"Roboto","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+    font-size:16px; line-height:1.7;
     -webkit-text-size-adjust:100%;
   }
-  .wrap{max-width:880px; margin:0 auto; padding:0 16px 72px;}
-  h1,h2,h3{font-family:"Noto Serif TC","Noto Sans TC",serif; text-wrap:balance;}
-  a{color:var(--sea);}
-  section{margin-top:44px; scroll-margin-top:66px;}
+  .wrap{max-width:880px; margin:0 auto; padding:0 var(--sp-2) var(--sp-8);}
+  h1,h2,h3{font-weight:900; letter-spacing:-.01em; text-wrap:balance;}
+  a{color:var(--color-secondary);}
+  section{margin-top:var(--sp-6); scroll-margin-top:120px;}
+  .num{font-variant-numeric:tabular-nums;}
 
-  /* ===== 手機置頂導覽 ===== */
-  .nav{
-    position:sticky; top:0; z-index:50;
-    background:var(--sand);
-    border-bottom:1px solid var(--line);
-    display:flex; gap:8px; overflow-x:auto; -webkit-overflow-scrolling:touch;
-    padding:10px 16px; scrollbar-width:none;
+  .progress{position:fixed; top:0; left:0; height:3px; width:0; z-index:90;
+    background:linear-gradient(90deg,var(--color-primary),var(--color-secondary)); }
+
+  /* ===== Aurora hero ===== */
+  .hero{position:relative; overflow:hidden; padding:calc(var(--sp-8) + 8px) 20px var(--sp-6);
+    background:var(--color-background);}
+  .hero .blob{position:absolute; border-radius:50%; filter:blur(70px); opacity:.55; pointer-events:none;}
+  .b1{width:420px;height:420px; background:#FDBA74; top:-160px; left:-120px; animation:drift 11s ease-in-out infinite alternate;}
+  .b2{width:380px;height:380px; background:#67E8F9; top:-60px; right:-140px; animation:drift 13s ease-in-out infinite alternate-reverse;}
+  .b3{width:300px;height:300px; background:#FDE68A; bottom:-160px; left:30%; animation:drift 9s ease-in-out infinite alternate;}
+  @media (prefers-color-scheme: dark){
+    .b1{background:#7C2D12; opacity:.5;} .b2{background:#155E75; opacity:.5;} .b3{background:#78350F; opacity:.45;}
   }
+  @keyframes drift{from{transform:translate(0,0) scale(1);}to{transform:translate(40px,24px) scale(1.08);}}
+  .hero-in{position:relative; max-width:880px; margin:0 auto;}
+  .chip{display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:700;
+    background:var(--color-card); border:1px solid var(--color-border); border-radius:999px;
+    padding:8px 16px; box-shadow:var(--shadow-1); color:var(--color-muted-foreground);}
+  .chip .dot{width:8px;height:8px;border-radius:50%;background:var(--color-primary);}
+  .hero h1{font-size:clamp(34px,8vw,56px); margin:18px 0 8px; line-height:1.15;}
+  .hero h1 .grad{background:linear-gradient(92deg,var(--color-primary),var(--color-secondary));
+    -webkit-background-clip:text; background-clip:text; color:transparent;}
+  .hero .sub{font-size:16px; color:var(--color-muted-foreground); margin:0 0 var(--sp-3); max-width:56ch;}
+  .stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:var(--sp-2); margin-top:var(--sp-3);}
+  .stat{background:var(--color-card); border:1px solid var(--color-border); border-radius:var(--r-md);
+    padding:14px 18px; box-shadow:var(--shadow-1);}
+  .stat .v{font-size:22px; font-weight:900; color:var(--color-primary);}
+  .stat .k{font-size:12.5px; color:var(--color-muted-foreground); font-weight:500;}
+
+  /* ===== sticky nav ===== */
+  .nav{position:sticky; top:0; z-index:80; background:color-mix(in srgb, var(--color-background) 82%, transparent);
+    backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--color-border);
+    display:flex; gap:var(--sp-1); overflow-x:auto; -webkit-overflow-scrolling:touch;
+    padding:10px var(--sp-2); scrollbar-width:none;}
   .nav::-webkit-scrollbar{display:none;}
-  .nav a{
-    flex:0 0 auto; font-size:13px; font-weight:700; text-decoration:none;
-    color:var(--ink); background:var(--paper); border:1px solid var(--line);
-    border-radius:18px; padding:6px 15px; line-height:1.4; white-space:nowrap;
-  }
-  .nav a.hot{color:#fff; background:var(--sunset); border-color:var(--sunset);}
-  .nav a.swap{color:var(--sea); border-color:var(--sea);}
+  .nav a{flex:0 0 auto; display:inline-flex; align-items:center; min-height:44px;
+    font-size:14px; font-weight:700; text-decoration:none; cursor:pointer;
+    color:var(--color-muted-foreground); background:transparent; border:1px solid transparent;
+    border-radius:999px; padding:0 18px; transition:color .2s, background .2s, border-color .2s;}
+  .nav a:hover{color:var(--color-foreground); background:var(--color-muted);}
+  .nav a.on{color:var(--color-on-primary); background:var(--color-primary); border-color:var(--color-primary);}
+  .nav a.swap{color:var(--color-secondary); border-color:color-mix(in srgb, var(--color-secondary) 50%, transparent);}
+  .nav a:focus-visible{outline:3px solid var(--color-ring); outline-offset:2px;}
 
-  /* ===== Hero（自駕版夕陽配色） ===== */
-  .hero{
-    background:linear-gradient(168deg,#5b2a12 0%,#a34a1e 55%,#c96a2e 100%);
-    color:#fdf4ec; padding:44px 20px 34px;
-  }
-  .hero-in{max-width:880px; margin:0 auto;}
-  .kicker{letter-spacing:.32em; font-size:11px; text-transform:uppercase; color:#f4cba4; margin:0 0 10px;}
-  .hero h1{font-size:clamp(30px,7vw,46px); font-weight:900; margin:0 0 6px; letter-spacing:.06em;}
-  .hero .sub{font-size:14px; color:#f8e3d0; margin:0 0 24px;}
-  .route{display:flex; align-items:center; gap:10px; flex-wrap:wrap;
-    font-family:"Noto Serif TC",serif; font-weight:700; font-size:16px;}
-  .route .dotline{flex:1 1 40px; min-width:34px; height:2px;
-    background:repeating-linear-gradient(90deg,#f4cba4 0 8px,transparent 8px 16px); position:relative;}
-  .route .dotline::after{content:"🚗"; position:absolute; right:-6px; top:-13px; font-size:13px;}
-  .route small{display:block; font-family:"Noto Sans TC",sans-serif; font-weight:400; font-size:11px; color:#f4cba4; letter-spacing:.05em;}
-  .hero-meta{display:flex; gap:8px 20px; flex-wrap:wrap; margin-top:22px; font-size:13px; color:#f8e3d0;}
-  .hero-meta b{color:#ffe3b8; font-weight:700;}
+  .sec-head{display:flex; align-items:center; gap:14px; margin-bottom:var(--sp-3);}
+  .sec-head .ic{width:44px; height:44px; border-radius:var(--r-sm); flex:0 0 44px;
+    display:grid; place-items:center; color:var(--color-on-secondary);
+    background:linear-gradient(135deg,var(--color-secondary),color-mix(in srgb,var(--color-secondary) 60%, var(--color-primary)));
+    box-shadow:var(--shadow-1);}
+  .sec-head .ic svg{width:22px; height:22px;}
+  .sec-head h2{font-size:24px; margin:0;}
+  .sec-head .step{margin-left:auto; font-size:12px; font-weight:700; letter-spacing:.12em;
+    color:var(--color-muted-foreground); text-transform:uppercase; white-space:nowrap;}
+  .lead{color:var(--color-muted-foreground); margin:0 0 var(--sp-2); max-width:62ch; font-size:15px;}
 
-  /* ===== 章節標題 ===== */
-  .sec-head{display:flex; align-items:baseline; gap:12px; border-bottom:3px solid var(--sunset); padding-bottom:8px; margin-bottom:20px;}
-  .sec-head .no{font-family:"Noto Serif TC",serif; font-size:13px; letter-spacing:.2em; color:var(--sunset); font-weight:700;}
-  .sec-head h2{font-size:21px; margin:0; font-weight:700;}
-  .sec-head .en{margin-left:auto; font-size:10px; letter-spacing:.2em; color:var(--ink-soft); text-transform:uppercase;}
-  .lead{color:var(--ink-soft); margin:0 0 16px; max-width:64ch; font-size:14px;}
+  .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:var(--sp-2);}
+  .card{background:var(--color-card); border:1px solid var(--color-border); border-radius:var(--r-lg);
+    padding:var(--sp-3); box-shadow:var(--shadow-1); transition:box-shadow .25s, transform .25s;}
+  .card:hover{box-shadow:var(--shadow-2); transform:translateY(-2px);}
+  .card h3{margin:0 0 10px; font-size:17px;}
+  .card p{margin:0; font-size:14.5px; color:var(--color-muted-foreground);}
+  .card p b, .card p strong{color:var(--color-card-foreground);}
 
-  /* ===== 卡片 ===== */
-  .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px;}
-  .card{background:var(--paper); border:1px solid var(--line); border-radius:6px; padding:16px 18px; box-shadow:var(--shadow);}
-  .card h3{margin:0 0 8px; font-size:16px;}
-  .card p{margin:0; font-size:14px;}
+  .notice{display:flex; gap:12px; align-items:flex-start;
+    background:var(--color-muted); border:1px solid var(--color-border); border-radius:var(--r-md);
+    padding:14px 18px; font-size:14.5px; margin-top:var(--sp-2);}
+  .notice .nic{flex:0 0 22px; margin-top:2px; color:var(--color-primary);}
+  .notice .nic svg{width:22px;height:22px;}
+  .notice.red .nic{color:var(--color-destructive);}
+  .notice.red b{color:var(--color-destructive);}
 
-  .notice{border-left:4px solid var(--sunset); background:var(--badge-bg); padding:11px 14px; border-radius:0 6px 6px 0; font-size:14px; margin-top:14px;}
-  .notice.red{border-left-color:var(--coral);}
-  .notice b{color:var(--coral);}
-  .notice.ok{border-left-color:var(--ok);}
-  .notice.ok b{color:var(--ok);}
+  .plan{background:var(--color-card); border:1px solid var(--color-border); border-radius:var(--r-lg);
+    box-shadow:var(--shadow-1); margin-top:var(--sp-3); overflow:hidden;}
+  .plan-head{padding:var(--sp-3) var(--sp-3) var(--sp-2); display:flex; gap:12px; align-items:center; flex-wrap:wrap;
+    background:linear-gradient(120deg, color-mix(in srgb, var(--color-primary) 8%, var(--color-card)), color-mix(in srgb, var(--color-secondary) 8%, var(--color-card)));
+    border-bottom:1px solid var(--color-border);}
+  .plan-tag{font-weight:900; font-size:13px; color:var(--color-on-primary); background:var(--color-primary);
+    border-radius:999px; padding:6px 16px; letter-spacing:.08em;}
+  .plan-head h3{margin:0; font-size:19px;}
+  .plan-head .for{font-size:13.5px; color:var(--color-muted-foreground); flex-basis:100%;}
 
-  /* ===== 行程卡 ===== */
-  .plan{background:var(--paper); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); margin-top:24px; overflow:hidden; scroll-margin-top:66px;}
-  .plan-head{padding:16px 18px 12px; border-bottom:1px dashed var(--line); display:flex; gap:12px; align-items:center; flex-wrap:wrap;}
-  .plan-tag{font-family:"Noto Serif TC",serif; font-weight:900; font-size:14px; color:#fff; background:var(--sunset); border-radius:4px; padding:4px 12px; letter-spacing:.1em;}
-  .plan-head h3{margin:0; font-size:18px;}
-  .plan-head .for{font-size:13px; color:var(--ink-soft); flex-basis:100%;}
-
-  .plan-map{padding:14px 18px 4px;}
+  .plan-map{padding:var(--sp-2) var(--sp-3) 4px;}
   .plan-map svg{width:100%; height:auto; display:block;}
-  .plan-map .cap{font-size:12px; color:var(--ink-soft); margin:6px 0 0; display:flex; gap:8px 16px; flex-wrap:wrap; align-items:center;}
-  .cap .sw{display:inline-block; width:22px; height:0; border-top:3px solid var(--sunset); vertical-align:middle; margin-right:6px; border-radius:2px;}
+  .plan-map .cap{font-size:12.5px; color:var(--color-muted-foreground); margin:8px 0 0; display:flex; gap:8px 18px; flex-wrap:wrap; align-items:center;}
+  .cap .sw{display:inline-block; width:22px; height:0; border-top:3px solid var(--color-primary); vertical-align:middle; margin-right:6px; border-radius:2px;}
   .cap .sw.rail{border-top:3px dashed var(--map-rail);}
   .cap .sw.hwy{border-top:3px solid var(--map-rail);}
-  .gmap-all{display:inline-block; margin:10px 18px 4px; font-size:13px; font-weight:700; color:var(--sunset); text-decoration:none; border:1.5px solid var(--sunset); border-radius:20px; padding:7px 16px;}
+  .gmap-all{display:inline-flex; align-items:center; gap:8px; min-height:44px; cursor:pointer;
+    margin:var(--sp-2) var(--sp-3) 4px; font-size:14px; font-weight:700; text-decoration:none;
+    color:var(--color-on-secondary); background:var(--color-secondary); border-radius:999px; padding:0 22px;
+    box-shadow:var(--shadow-1); transition:filter .2s, transform .2s;}
+  .gmap-all:hover{filter:brightness(1.08); transform:translateY(-1px);}
+  .gmap-all:focus-visible{outline:3px solid var(--color-ring); outline-offset:2px;}
+  .gmap-all svg{width:16px;height:16px;}
 
-  /* SVG 樣式 */
   .m-land{fill:var(--map-land);}
   .m-sea{fill:var(--map-sea);}
   .m-rail{stroke:var(--map-rail); stroke-width:2.5; stroke-dasharray:1 6; stroke-linecap:round; fill:none;}
   .m-hwy{stroke:var(--map-rail); stroke-width:3; stroke-linecap:round; fill:none; opacity:.75;}
   .m-st{fill:var(--map-rail);}
-  .m-lb{font-family:"Noto Sans TC",sans-serif; font-size:10.5px; fill:var(--ink); font-weight:500;}
-  .m-lb.soft{fill:var(--ink-soft); font-size:9.5px;}
-  .m-poi{fill:var(--coral);}
-  .rD{stroke:var(--sunset); stroke-width:3; fill:none; stroke-linecap:round;}
-  #arw-d path{fill:var(--sunset);}
-  .stepD circle{fill:var(--sunset);}
-  .stepD text{fill:#fff; font-size:10px; font-weight:700; text-anchor:middle; font-family:"Noto Sans TC",sans-serif;}
+  .m-lb{font-family:"Noto Sans TC",sans-serif; font-size:10.5px; fill:var(--color-foreground); font-weight:500;}
+  .m-lb.soft{fill:var(--color-muted-foreground); font-size:9.5px;}
+  .m-poi{fill:var(--color-secondary);}
+  .rD{stroke:var(--color-primary); stroke-width:3; fill:none; stroke-linecap:round;}
+  #arw-d path{fill:var(--color-primary);}
+  .stepD circle{fill:var(--color-primary);}
+  .stepD text{fill:var(--color-on-primary); font-size:10px; font-weight:700; text-anchor:middle; font-family:"Roboto","Noto Sans TC",sans-serif;}
 
-  /* 時間軸 */
-  .timeline{list-style:none; margin:0; padding:18px 18px;}
-  .timeline li{display:grid; grid-template-columns:56px 14px 1fr; gap:0 12px; position:relative; padding-bottom:18px;}
-  .timeline li:last-child{padding-bottom:2px;}
-  .timeline .tt{font-variant-numeric:tabular-nums; font-weight:700; font-size:14px; color:var(--sea-deep); text-align:right; line-height:1.5;}
+  .timeline{list-style:none; margin:0; padding:var(--sp-3);}
+  .timeline li{display:grid; grid-template-columns:58px 16px 1fr; gap:0 14px; position:relative; padding-bottom:var(--sp-3);}
+  .timeline li:last-child{padding-bottom:4px;}
+  .timeline .tt{font-weight:900; font-size:15px; color:var(--color-secondary); text-align:right; line-height:1.5;}
   .timeline .nd{position:relative;}
-  .timeline .nd::before{content:""; position:absolute; left:5px; top:6px; width:8px; height:8px; border-radius:50%; background:var(--sunset); border:2px solid var(--paper); box-shadow:0 0 0 1px var(--sunset);}
-  .timeline li:not(:last-child) .nd::after{content:""; position:absolute; left:10px; top:20px; bottom:-6px; width:2px; background:var(--line);}
-  .timeline .tx b{font-size:15px;}
-  .timeline .tx{font-size:14px;}
-  .timeline .tx .how{color:var(--ink-soft); font-size:13px;}
-  .meal .nd::before{background:var(--coral); box-shadow:0 0 0 1px var(--coral);}
-  .maplink{display:inline-block; font-size:12px; font-weight:700; text-decoration:none; color:var(--sea);
-    border:1px solid var(--sea); border-radius:13px; padding:2px 11px; margin:2px 0 2px 6px; white-space:nowrap;}
-  .maplink::before{content:"➤ "; font-size:10px;}
+  .timeline .nd::before{content:""; position:absolute; left:4px; top:5px; width:10px; height:10px; border-radius:50%;
+    background:var(--color-primary); border:3px solid var(--color-card); box-shadow:0 0 0 2px var(--color-primary);}
+  .timeline li:not(:last-child) .nd::after{content:""; position:absolute; left:9.5px; top:22px; bottom:-4px; width:3px; border-radius:2px;
+    background:linear-gradient(var(--color-primary), color-mix(in srgb, var(--color-secondary) 60%, var(--color-primary)));
+    opacity:.25;}
+  .timeline .tx b{font-size:15.5px;}
+  .timeline .tx{font-size:14.5px;}
+  .timeline .tx .how{color:var(--color-muted-foreground); font-size:13.5px;}
+  .meal .nd::before{background:var(--color-accent); box-shadow:0 0 0 2px var(--color-accent);}
+  .maplink{display:inline-flex; align-items:center; gap:5px; min-height:32px; cursor:pointer;
+    font-size:12.5px; font-weight:700; text-decoration:none; color:var(--color-secondary);
+    border:1.5px solid color-mix(in srgb, var(--color-secondary) 45%, transparent); border-radius:999px;
+    padding:0 12px; margin:3px 0 3px 6px; white-space:nowrap; transition:background .2s, color .2s;}
+  .maplink:hover{background:var(--color-secondary); color:var(--color-on-secondary);}
+  .maplink:focus-visible{outline:3px solid var(--color-ring); outline-offset:2px;}
+  .maplink svg{width:12px;height:12px; flex:0 0 12px;}
 
-  /* ===== 景點/餐廳卡 ===== */
-  .r-card{background:var(--paper); border:1px solid var(--line); border-radius:6px; padding:16px 18px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:8px;}
+  .r-card{background:var(--color-card); border:1px solid var(--color-border); border-radius:var(--r-lg);
+    padding:var(--sp-3); box-shadow:var(--shadow-1); display:flex; flex-direction:column; gap:10px;
+    transition:box-shadow .25s, transform .25s;}
+  .r-card:hover{box-shadow:var(--shadow-2); transform:translateY(-2px);}
   .r-top{display:flex; align-items:flex-start; gap:10px; flex-wrap:wrap;}
-  .r-top h3{margin:0; font-size:16px; flex:1 1 auto;}
-  .badge{font-size:11px; font-weight:700; letter-spacing:.08em; border-radius:3px; padding:2px 8px; white-space:nowrap;}
-  .badge.book{background:var(--coral); color:#fff;}
-  .badge.walkin{background:var(--ok); color:#fff;}
-  .badge.closed{background:var(--ink-soft); color:#fff;}
-  .r-meta{font-size:13px; color:var(--ink-soft); display:grid; grid-template-columns:4.5em 1fr; gap:2px 8px; margin:0;}
-  .r-meta dt{font-weight:700; color:var(--ink);}
+  .r-top h3{margin:0; font-size:16.5px; flex:1 1 auto;}
+  .badge{font-size:11.5px; font-weight:700; letter-spacing:.06em; border-radius:999px; padding:4px 12px; white-space:nowrap;}
+  .badge.book{background:var(--color-primary); color:var(--color-on-primary);}
+  .badge.walkin{background:color-mix(in srgb, var(--ok) 15%, var(--color-card)); color:var(--ok); border:1px solid color-mix(in srgb, var(--ok) 40%, transparent);}
+  .badge.closed{background:var(--color-muted); color:var(--color-muted-foreground); border:1px solid var(--color-border);}
+  .r-meta{font-size:13.5px; color:var(--color-muted-foreground); display:grid; grid-template-columns:4.5em 1fr; gap:2px 10px; margin:0;}
+  .r-meta dt{font-weight:700; color:var(--color-card-foreground);}
   .r-meta dd{margin:0;}
-  .r-note{font-size:13px; border-top:1px dashed var(--line); padding-top:8px;}
-  .grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:14px;}
+  .r-note{font-size:13.5px; border-top:1px dashed var(--color-border); padding-top:10px; color:var(--color-muted-foreground);}
+  .r-note b{color:var(--color-card-foreground);}
+  .grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:var(--sp-2);}
 
-  /* ===== 表格 ===== */
-  .t-wrap{overflow-x:auto; background:var(--paper); border:1px solid var(--line); border-radius:6px; box-shadow:var(--shadow);}
-  table{border-collapse:collapse; width:100%; min-width:480px; font-size:14px;}
-  th,td{padding:10px 13px; text-align:left; border-bottom:1px solid var(--line); vertical-align:top;}
-  th{background:var(--sunset); color:#fff; font-weight:700; white-space:nowrap;}
+  .t-wrap{overflow-x:auto; background:var(--color-card); border:1px solid var(--color-border); border-radius:var(--r-lg); box-shadow:var(--shadow-1);}
+  table{border-collapse:collapse; width:100%; min-width:480px; font-size:14.5px;}
+  th,td{padding:12px 16px; text-align:left; border-bottom:1px solid var(--color-border); vertical-align:top;}
+  th{background:var(--color-muted); color:var(--color-card-foreground); font-weight:700; white-space:nowrap; font-size:13px; letter-spacing:.04em;}
   tr:last-child td{border-bottom:none;}
-  td.num{font-variant-numeric:tabular-nums; white-space:nowrap;}
+  td.num{white-space:nowrap;}
 
-  .check{list-style:none; padding:0; margin:0; display:grid; gap:10px;}
-  .check li{background:var(--paper); border:1px solid var(--line); border-radius:6px; padding:12px 15px 12px 42px; position:relative; font-size:14px; box-shadow:var(--shadow);}
-  .check li::before{content:"✓"; position:absolute; left:15px; top:12px; color:var(--sunset); font-weight:900;}
+  .check{list-style:none; padding:0; margin:0; display:grid; gap:var(--sp-2);}
+  .check li{background:var(--color-card); border:1px solid var(--color-border); border-radius:var(--r-md);
+    padding:14px 18px 14px 52px; position:relative; font-size:14.5px; box-shadow:var(--shadow-1); color:var(--color-muted-foreground);}
+  .check li b{color:var(--color-card-foreground);}
+  .check .cic{position:absolute; left:16px; top:14px; width:22px; height:22px; border-radius:50%;
+    display:grid; place-items:center; color:var(--color-on-primary);
+    background:linear-gradient(135deg,var(--color-primary),var(--color-accent));}
+  .check .cic svg{width:13px;height:13px;}
 
-  .foot{margin-top:52px; border-top:1px solid var(--line); padding-top:16px; font-size:12px; color:var(--ink-soft);}
+  .foot{margin-top:var(--sp-8); border-top:1px solid var(--color-border); padding-top:var(--sp-2);
+    font-size:12.5px; color:var(--color-muted-foreground);}
   .foot p{margin:0 0 8px; max-width:72ch;}
 
   @media (max-width:480px){
-    body{font-size:14.5px;}
-    .hero{padding:34px 18px 28px;}
-    .hero-meta{font-size:12px;}
-    .sec-head .en{display:none;}
-    .timeline{padding:16px 14px;}
-    .timeline li{grid-template-columns:48px 12px 1fr; gap:0 10px;}
+    body{font-size:15px;}
+    .hero{padding-top:var(--sp-6);}
+    .sec-head .step{display:none;}
+    .timeline{padding:var(--sp-2);}
+    .timeline li{grid-template-columns:50px 14px 1fr; gap:0 10px;}
   }
-  @media (prefers-reduced-motion: reduce){ *{animation:none!important; transition:none!important; scroll-behavior:auto!important;} }
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none!important; transition:none!important; scroll-behavior:auto!important;}
+    .card:hover,.r-card:hover,.gmap-all:hover{transform:none;}
+  }
 </style>
 </head>
 <body>
 
+<div class="progress" id="progress" aria-hidden="true"></div>
+
 <header class="hero">
+  <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
   <div class="hero-in">
-    <p class="kicker">One-Day Road Trip · Okinawa</p>
-    <h1>沖繩自駕一日行</h1>
-    <p class="sub">2026 年 10 月 7 日（星期三）・台灣虎航當天來回・租車跑中部海岸線，瀨長島夕陽收尾</p>
-    <div class="route">
-      <span>那霸機場<small>10:50 取車上路</small></span>
-      <span class="dotline"></span>
-      <span>北谷・萬座毛<small>國道 58 號海岸線</small></span>
-      <span class="dotline"></span>
-      <span>瀨長島<small>18:10 夕陽</small></span>
-    </div>
-    <div class="hero-meta">
-      <span>可自駕時間 <b>約 6.5 小時</b></span>
-      <span>還車死線 <b>18:00（Times）</b></span>
-      <span>回機場硬限制 <b>19:30</b></span>
-      <span>交通費比電車版 <b>＋約 NT$400–600／人</b></span>
+    <span class="chip"><span class="dot"></span>2026.10.07（三）・虎航當天來回・自駕版</span>
+    <h1>沖繩<span class="grad">自駕</span>一日行</h1>
+    <p class="sub">租車跑中部海岸線：北谷石垣牛午餐、萬座毛、真榮田岬、美國村，17:20 還車後計程車上瀨長島看 18:10 夕陽。</p>
+    <div class="stats">
+      <div class="stat"><div class="v num">6.5 小時</div><div class="k">實際可自駕時間</div></div>
+      <div class="stat"><div class="v num">18:00</div><div class="k">Times 還車死線</div></div>
+      <div class="stat"><div class="v num">19:30</div><div class="k">回機場硬限制</div></div>
+      <div class="stat"><div class="v num">＋400–600</div><div class="k">比電車版多的交通費（NT$／人）</div></div>
     </div>
   </div>
 </header>
 
-<nav class="nav" aria-label="快速跳轉">
+<nav class="nav" id="nav" aria-label="快速跳轉">
   <a href="./" class="swap">◀ 電車版</a>
   <a href="#rental">租車須知</a>
-  <a href="#route" class="hot">行程</a>
+  <a href="#route" class="on">行程</a>
   <a href="#spots">景點美食</a>
   <a href="#alts">備案</a>
   <a href="#budget">預算比較</a>
@@ -214,7 +273,10 @@
 
   <!-- 租車須知 -->
   <section id="rental">
-    <div class="sec-head"><span class="no">01</span><h2>租車重點</h2><span class="en">Car Rental</span></div>
+    <div class="sec-head">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11M5 11h14a2 2 0 0 1 2 2v4h-2M5 11a2 2 0 0 0-2 2v4h2m0 0a2 2 0 1 0 4 0m-4 0h4m6 0a2 2 0 1 0 4 0m-4 0h4"/></svg></span>
+      <h2>租車重點</h2><span class="step">Step 1 / 6</span>
+    </div>
     <div class="cards">
       <div class="card">
         <h3>駕照日文譯本（必辦）</h3>
@@ -233,15 +295,21 @@
         <p>右駕左行，方向燈和雨刷相反，停車轉彎注意左後輪。那霸平日 16:30–19:30 是往郊區尖峰，國道 58 號最塞（那霸尖峰車速全日本最慢）。<b>回程一律走沖繩自動車道</b>（沖繩南 IC→那霸 IC，約 ¥650，ETC ¥420），不要傍晚硬走 58 號。</p>
       </div>
     </div>
-    <div class="notice red"><b>還車時間是這天的硬限制：</b>Times 18:00 打烊、班機 21:40 起飛、19:30 前要到國際線。行程表已抓 17:20 還車＋計程車上瀨長島看夕陽，只要 16:30 準時從美國村出發就很從容。颱風警報期間請放棄自駕，直接改走電車版。</div>
+    <div class="notice red">
+      <span class="nic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></span>
+      <span><b>還車時間是這天的硬限制：</b>Times 18:00 打烊、班機 21:40 起飛、19:30 前要到國際線。行程表已抓 17:20 還車＋計程車上瀨長島看夕陽，只要 16:30 準時從美國村出發就很從容。颱風警報期間請放棄自駕，直接改走<a href="./">電車版</a>。</span>
+    </div>
   </section>
 
   <!-- 行程 -->
   <section id="route">
-    <div class="sec-head"><span class="no">02</span><h2>自駕定案行程</h2><span class="en">The Road Trip</span></div>
-    <p class="lead">中部海岸線一日圈：北谷石垣牛午餐 → 萬座毛 → 真榮田岬 → 美國村 → 高速回程還車 → 計程車上瀨長島看 18:10 夕陽。不去水族館，把時間留給海岸線。</p>
+    <div class="sec-head">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 20l-5.5-2.5v-13L9 7l6-2.5L20.5 7v13L15 17.5 9 20z"/><path d="M9 7v13M15 4.5v13"/></svg></span>
+      <h2>自駕定案行程</h2><span class="step">Step 2 / 6</span>
+    </div>
+    <p class="lead">中部海岸線一日圈。不去水族館（單程 2 小時＋週三部分開園，CP 值太低），把時間留給海岸線。</p>
 
-    <article class="plan" id="planD">
+    <article class="plan">
       <div class="plan-head">
         <span class="plan-tag">自駕版</span>
         <h3>中部海岸線 × 石垣牛午餐 × 瀨長島夕陽</h3>
@@ -257,17 +325,13 @@
           </defs>
           <rect x="0" y="0" width="380" height="430" class="m-land"/>
           <path class="m-sea" d="M0,0 L120,0 C100,60 118,130 104,200 C94,260 72,300 78,340 L130,430 L0,430 Z"/>
-          <!-- 瀨長島 -->
           <ellipse cx="96" cy="398" rx="15" ry="10" class="m-land" stroke="var(--map-rail)" stroke-width="1"/>
-          <!-- 國道58號（海岸虛線） -->
           <path class="m-rail" d="M118,332 C130,290 142,250 150,205 C158,160 158,110 170,58"/>
           <text x="176" y="160" class="m-lb soft">國道58號</text>
-          <!-- 沖繩自動車道 -->
           <path class="m-hwy" d="M238,88 C255,160 244,240 208,322"/>
           <text x="256" y="210" class="m-lb soft">沖繩自動車道</text>
           <circle cx="224" cy="248" r="3.5" class="m-st"/><text x="232" y="252" class="m-lb soft">沖繩南IC</text>
           <circle cx="210" cy="318" r="3.5" class="m-st"/><text x="218" y="322" class="m-lb soft">那霸IC</text>
-          <!-- 地點 -->
           <circle cx="108" cy="338" r="4" class="m-st"/><text x="36" y="332" class="m-lb">那霸機場</text>
           <rect x="140" y="326" width="7" height="7" class="m-st"/><text x="156" y="346" class="m-lb soft">Times還車</text>
           <rect x="146" y="201" width="9" height="9" class="m-poi" transform="rotate(45 150 205)"/><text x="162" y="202" class="m-lb">美國村・北谷</text>
@@ -276,7 +340,6 @@
           <rect x="164" y="48" width="9" height="9" class="m-poi" transform="rotate(45 168 52)"/><text x="180" y="50" class="m-lb">萬座毛</text>
           <text x="66" y="424" class="m-lb">瀨長島</text>
           <text x="26" y="180" class="m-lb soft">東海</text>
-          <!-- 路線箭頭 -->
           <path class="rD" d="M116,330 C130,290 140,252 147,216" marker-end="url(#arw-d)"/>
           <path class="rD" d="M158,196 C156,150 160,104 166,64" marker-end="url(#arw-d)"/>
           <path class="rD" d="M162,66 C150,78 144,92 142,104" marker-end="url(#arw-d)"/>
@@ -284,7 +347,6 @@
           <path class="rD" d="M160,210 C205,228 240,262 216,302 C204,320 172,330 152,332" marker-end="url(#arw-d)"/>
           <path class="rD" d="M104,346 C98,362 96,374 96,386" marker-end="url(#arw-d)"/>
           <path class="rD" d="M86,388 C80,372 82,358 92,346" marker-end="url(#arw-d)"/>
-          <!-- 步驟編號 -->
           <g class="stepD"><circle cx="118" cy="278" r="8"/><text x="118" y="281.5">1</text></g>
           <g class="stepD"><circle cx="174" cy="128" r="8"/><text x="174" y="131.5">2</text></g>
           <g class="stepD"><circle cx="136" cy="82" r="8"/><text x="136" y="85.5">3</text></g>
@@ -300,30 +362,36 @@
           <span>1 北谷石垣牛午餐 → 2 萬座毛 → 3 真榮田岬 → 4 美國村 → 5 高速回程還車 → 6 計程車上瀨長島 → 7 回機場</span>
         </p>
       </div>
-      <a class="gmap-all" href="https://www.google.com/maps/dir/那覇空港/石垣牛専門店+焼肉金城+北谷本店/万座毛/真栄田岬/美浜アメリカンビレッジ/瀬長島ウミカジテラス/那覇空港国際線ターミナル" target="_blank" rel="noopener">在 Google 地圖開啟全程路線 ↗</a>
+      <a class="gmap-all" href="https://www.google.com/maps/dir/那覇空港/石垣牛専門店+焼肉金城+北谷本店/万座毛/真栄田岬/美浜アメリカンビレッジ/瀬長島ウミカジテラス/那覇空港国際線ターミナル" target="_blank" rel="noopener">在 Google 地圖開啟全程路線<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
 
       <ul class="timeline">
-        <li><span class="tt">09:20</span><span class="nd"></span><span class="tx"><b>IT230 抵達那霸</b><br><span class="how">建議不託運行李；VJW QR 入境，約 10:00 出關</span></span></li>
-        <li><span class="tt">10:00</span><span class="nd"></span><span class="tx"><b>步行到國內線航廈，搭 Times 接駁車</b><br><span class="how">國際線接駁站施工中，要走到國內線航廈前 11 號站牌；接駁約 5–10 分</span></span></li>
-        <li><span class="tt">10:15</span><span class="nd"></span><span class="tx"><b>Times 那霸空港店取車</b><br><span class="how">出示駕照正本＋日文譯本＋護照，全員登記駕駛、加保 NOC；10:50 上路</span></span></li>
-        <li class="meal"><span class="tt">11:40</span><span class="nd"></span><span class="tx"><b>午餐：石垣牛專門店 燒肉金城 北谷本店</b>（需訂位）<a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=タイムズカー那覇空港店&destination=石垣牛専門店+焼肉金城+北谷本店&travelmode=driving" target="_blank" rel="noopener">導航</a><br><span class="how">車程約 50 分；自家牧場石垣牛、有停車場、附沙拉湯自助吧。Hitosara 可網路訂位，營業時間各來源不一，訂位時務必確認</span></span></li>
-        <li><span class="tt">13:35</span><span class="nd"></span><span class="tx"><b>萬座毛</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=石垣牛専門店+焼肉金城+北谷本店&destination=万座毛&travelmode=driving" target="_blank" rel="noopener">導航</a><br><span class="how">沿 58 號北上約 45 分；門票 ¥100、停車免費，象鼻岩＋斷崖海景約 40 分鐘</span></span></li>
-        <li><span class="tt">14:20</span><span class="nd"></span><span class="tx"><b>真榮田岬（青之洞窟）觀景台</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=万座毛&destination=真栄田岬&travelmode=driving" target="_blank" rel="noopener">導航</a><br><span class="how">車程約 15 分；站在觀景台看透明海色就值得，不用下水</span></span></li>
-        <li><span class="tt">15:45</span><span class="nd"></span><span class="tx"><b>美國村散步・日落海灘</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=真栄田岬&destination=美浜アメリカンビレッジ&travelmode=driving" target="_blank" rel="noopener">導航</a><br><span class="how">南下約 40 分；町營停車場免費。逛 45 分鐘就好，<b>16:30 準時上車</b></span></span></li>
-        <li><span class="tt">16:30</span><span class="nd"></span><span class="tx"><b>走高速回程：沖繩南 IC → 那霸 IC</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=美浜アメリカンビレッジ&destination=タイムズカー那覇空港店&travelmode=driving" target="_blank" rel="noopener">導航</a><br><span class="how">避開 58 號傍晚尖峰；過路費約 ¥650（ETC ¥420），約 50 分</span></span></li>
-        <li><span class="tt">17:20</span><span class="nd"></span><span class="tx"><b>加油＋還車</b><br><span class="how">Times 有場內代加油服務；離 18:00 打烊留 40 分鐘緩衝，接駁回機場</span></span></li>
-        <li><span class="tt">17:45</span><span class="nd"></span><span class="tx"><b>計程車上瀨長島</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=那覇空港&destination=瀬長島ウミカジテラス&travelmode=driving" target="_blank" rel="noopener">導航</a><br><span class="how">約 15 分、約 ¥1,500；省錢版：單軌到赤嶺站轉 17:49 的 TK02（¥150）</span></span></li>
-        <li><span class="tt">18:00</span><span class="nd"></span><span class="tx"><b>瀨長島 Umikaji Terrace・18:10 看夕陽</b><br><span class="how">看完夕陽吃點小吃：きじむなぁ塔可飯、鮪魚丼</span></span></li>
-        <li><span class="tt">18:50</span><span class="nd"></span><span class="tx"><b>計程車回機場國際線</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=瀬長島ウミカジテラス&destination=那覇空港国際線ターミナル&travelmode=driving" target="_blank" rel="noopener">導航</a><br><span class="how">約 10–15 分，19:10 前抵達，比 19:30 硬限制早 20 分鐘</span></span></li>
-        <li><span class="tt">21:40</span><span class="nd"></span><span class="tx"><b>IT233 起飛 → 22:10 回桃園</b></span></li>
+        <li><span class="tt num">09:20</span><span class="nd"></span><span class="tx"><b>IT230 抵達那霸</b><br><span class="how">建議不託運行李；VJW QR 入境，約 10:00 出關</span></span></li>
+        <li><span class="tt num">10:00</span><span class="nd"></span><span class="tx"><b>步行到國內線航廈，搭 Times 接駁車</b><br><span class="how">國際線接駁站施工中，要走到國內線航廈前 11 號站牌；接駁約 5–10 分</span></span></li>
+        <li><span class="tt num">10:15</span><span class="nd"></span><span class="tx"><b>Times 那霸空港店取車</b><br><span class="how">出示駕照正本＋日文譯本＋護照，全員登記駕駛、加保 NOC；10:50 上路</span></span></li>
+        <li class="meal"><span class="tt num">11:40</span><span class="nd"></span><span class="tx"><b>午餐：石垣牛專門店 燒肉金城 北谷本店</b>（需訂位）<a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=タイムズカー那覇空港店&destination=石垣牛専門店+焼肉金城+北谷本店&travelmode=driving" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>導航</a><br><span class="how">車程約 50 分；自家牧場石垣牛、有停車場、附沙拉湯自助吧。Hitosara 可網路訂位，營業時間各來源不一，訂位時務必確認</span></span></li>
+        <li><span class="tt num">13:35</span><span class="nd"></span><span class="tx"><b>萬座毛</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=石垣牛専門店+焼肉金城+北谷本店&destination=万座毛&travelmode=driving" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>導航</a><br><span class="how">沿 58 號北上約 45 分；門票 ¥100、停車免費，象鼻岩＋斷崖海景約 40 分鐘</span></span></li>
+        <li><span class="tt num">14:20</span><span class="nd"></span><span class="tx"><b>真榮田岬（青之洞窟）觀景台</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=万座毛&destination=真栄田岬&travelmode=driving" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>導航</a><br><span class="how">車程約 15 分；站在觀景台看透明海色就值得，不用下水</span></span></li>
+        <li><span class="tt num">15:45</span><span class="nd"></span><span class="tx"><b>美國村散步・日落海灘</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=真栄田岬&destination=美浜アメリカンビレッジ&travelmode=driving" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>導航</a><br><span class="how">南下約 40 分；町營停車場免費。逛 45 分鐘就好，<b>16:30 準時上車</b></span></span></li>
+        <li><span class="tt num">16:30</span><span class="nd"></span><span class="tx"><b>走高速回程：沖繩南 IC → 那霸 IC</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=美浜アメリカンビレッジ&destination=タイムズカー那覇空港店&travelmode=driving" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>導航</a><br><span class="how">避開 58 號傍晚尖峰；過路費約 ¥650（ETC ¥420），約 50 分</span></span></li>
+        <li><span class="tt num">17:20</span><span class="nd"></span><span class="tx"><b>加油＋還車</b><br><span class="how">Times 有場內代加油服務；離 18:00 打烊留 40 分鐘緩衝，接駁回機場</span></span></li>
+        <li><span class="tt num">17:45</span><span class="nd"></span><span class="tx"><b>計程車上瀨長島</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=那覇空港&destination=瀬長島ウミカジテラス&travelmode=driving" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>導航</a><br><span class="how">約 15 分、約 ¥1,500；省錢版：單軌到赤嶺站轉 17:49 的 TK02（¥150，車上不收 IC 卡，備零錢）</span></span></li>
+        <li><span class="tt num">18:00</span><span class="nd"></span><span class="tx"><b>瀨長島 Umikaji Terrace・18:10 看夕陽</b><br><span class="how">看完夕陽吃點小吃：きじむなぁ塔可飯、鮪魚丼</span></span></li>
+        <li><span class="tt num">18:50</span><span class="nd"></span><span class="tx"><b>計程車回機場國際線</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=瀬長島ウミカジテラス&destination=那覇空港国際線ターミナル&travelmode=driving" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>導航</a><br><span class="how">約 10–15 分，19:10 前抵達，比 19:30 硬限制早 20 分鐘</span></span></li>
+        <li><span class="tt num">21:40</span><span class="nd"></span><span class="tx"><b>IT233 起飛 → 22:10 回桃園</b></span></li>
       </ul>
     </article>
-    <div class="notice"><b>兩條判斷準則：</b>①15:45 人還在恩納村 → 跳過美國村直接回程。②16:30 導航顯示回 Times 超過 60 分鐘 → 立刻出發，瀨長島當 bonus、看不到就算了。還車永遠優先於行程。</div>
+    <div class="notice">
+      <span class="nic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+      <span><b>兩條判斷準則：</b>①15:45 人還在恩納村 → 跳過美國村直接回程。②16:30 導航顯示回 Times 超過 60 分鐘 → 立刻出發，瀨長島當 bonus、看不到就算了。還車永遠優先於行程。</span>
+    </div>
   </section>
 
   <!-- 景點美食 -->
   <section id="spots">
-    <div class="sec-head"><span class="no">03</span><h2>景點與美食</h2><span class="en">Spots & Eats</span></div>
+    <div class="sec-head">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg></span>
+      <h2>景點與美食</h2><span class="step">Step 3 / 6</span>
+    </div>
     <div class="grid2">
       <div class="r-card">
         <div class="r-top"><h3>石垣牛專門店 燒肉金城 北谷本店</h3><span class="badge book">需訂位</span></div>
@@ -370,7 +438,10 @@
 
   <!-- 備案 -->
   <section id="alts">
-    <div class="sec-head"><span class="no">04</span><h2>替代路線</h2><span class="en">Alternatives</span></div>
+    <div class="sec-head">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h5l2-3h4l2 3h5v13H3zM12 17a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></svg></span>
+      <h2>替代路線</h2><span class="step">Step 4 / 6</span>
+    </div>
     <div class="cards">
       <div class="card">
         <h3>南部文化線（塞車風險最低）</h3>
@@ -389,7 +460,10 @@
 
   <!-- 預算比較 -->
   <section id="budget">
-    <div class="sec-head"><span class="no">05</span><h2>預算與電車版比較</h2><span class="en">Budget</span></div>
+    <div class="sec-head">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 8l4 5 4-5M8 13h8M8 16h8M12 13v6"/></svg></span>
+      <h2>預算與電車版比較</h2><span class="step">Step 5 / 6</span>
+    </div>
     <div class="t-wrap">
       <table>
         <tr><th>項目（4 人一車）</th><th class="num">日圓／車</th><th class="num">新台幣／人</th></tr>
@@ -406,33 +480,66 @@
     <div class="t-wrap" style="margin-top:14px;">
       <table>
         <tr><th>面向</th><th>自駕版</th><th>電車版</th></tr>
-        <tr><td>當地交通費／人</td><td class="num">約 NT$700–850</td><td class="num">約 NT$250–400</td></tr>
+        <tr><td>當地交通費／人</td><td class="num">約 NT$700–850</td><td class="num">約 NT$210–400</td></tr>
         <tr><td>看得到的東西</td><td>中部海岸線：萬座毛、真榮田岬、美國村＋瀨長島</td><td>那霸市區：波上宮、市場、壺屋＋瀨長島</td></tr>
         <tr><td>午餐燒肉</td><td>石垣牛（燒肉金城）</td><td>本部牛（本部牧場）</td></tr>
         <tr><td>主要風險</td><td>右駕事故、傍晚塞車、18:00 還車死線</td><td>TK02 班次少、可能誤點</td></tr>
         <tr><td>適合</td><td>有右駕經驗、想看海岸線</td><td>首次赴沖、重吃重逛</td></tr>
       </table>
     </div>
-    <p class="lead" style="margin-top:10px;">結論：有人有右駕（或日本自駕）經驗且天氣正常 → 選自駕版，每人多花約 NT$400–600 換整條中部海岸線。沒人開過右駕、或出發前 3 天颱風路徑有疑慮 → 電車版，把預算加碼在燒肉上。</p>
+    <p class="lead" style="margin-top:12px;">結論：有人有右駕（或日本自駕）經驗且天氣正常 → 選自駕版，每人多花約 NT$400–600 換整條中部海岸線。沒人開過右駕、或出發前 3 天颱風路徑有疑慮 → 電車版，把預算加碼在燒肉上。</p>
   </section>
 
   <!-- 行前 -->
   <section id="check">
-    <div class="sec-head"><span class="no">06</span><h2>行前待辦（自駕版）</h2><span class="en">Checklist</span></div>
+    <div class="sec-head">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+      <h2>行前待辦（自駕版）</h2><span class="step">Step 6 / 6</span>
+    </div>
     <ul class="check">
-      <li><b>辦駕照日文譯本</b>：所有要開車的人本週到監理站臨櫃辦（身分證＋駕照正本，NT$100，當場取件），順便確認駕照沒過期。</li>
-      <li><b>訂車</b>：Times 那霸空港店，取車 10:30、還車 17:30；比價 Klook 與官網會員價；<b>加 NOC 安心險、勾 ETC、駕駛人全部登記</b>。</li>
-      <li><b>訂燒肉金城</b>：Hitosara 訂 11:45 午餐，同時電話確認當天營業時間（各來源寫法不一）。</li>
-      <li><b>導航設定</b>：日本車機可輸入電話或 MapCode——萬座毛 MapCode <b>206 312 038*55</b>；其他點用 Google Maps 連結對照。</li>
-      <li><b>颱風判斷</b>：出發前 3 天看日本氣象廳路徑，當天 07:00 再確認；有警報就改電車版（機票照飛就照電車版走）。</li>
-      <li><b>帶現金 ¥10,000–15,000</b>＋信用卡（過路費人工道可付現）；護照、台灣駕照、日文譯本三樣放同一個夾鏈袋。</li>
+      <li><span class="cic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><b>辦駕照日文譯本</b>：所有要開車的人本週到監理站臨櫃辦（身分證＋駕照正本，NT$100，當場取件），順便確認駕照沒過期。</li>
+      <li><span class="cic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><b>訂車</b>：Times 那霸空港店，取車 10:30、還車 17:30；比價 Klook 與官網會員價；<b>加 NOC 安心險、勾 ETC、駕駛人全部登記</b>。</li>
+      <li><span class="cic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><b>訂燒肉金城</b>：Hitosara 訂 11:45 午餐，同時電話確認當天營業時間（各來源寫法不一）。</li>
+      <li><span class="cic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><b>導航設定</b>：日本車機可輸入電話或 MapCode——萬座毛 MapCode <b>206 312 038*55</b>；其他點用 Google Maps 連結對照。</li>
+      <li><span class="cic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><b>颱風判斷</b>：出發前 3 天看日本氣象廳路徑，當天 07:00 再確認；有警報就改電車版（機票照飛就照電車版走）。</li>
+      <li><span class="cic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><b>帶現金 ¥10,000–15,000</b>＋信用卡（過路費人工道可付現）；護照、台灣駕照、日文譯本三樣放同一個夾鏈袋。</li>
     </ul>
   </section>
 
   <footer class="foot">
-    <p>資料查證至 2026/9/25。注意：Times 那霸空港店營業時間網路上有 18:00 與 20:00 兩種說法，本頁採官方的 9:00–18:00，訂車時請再確認；燒肉金城營業時間各來源不一，請以訂位確認為準；租車價為官網牌價，實際以訂車頁為準。車程與停留時間為概略估計，受當天路況影響。</p>
-    <p>路線圖為示意圖，非實際比例；各段請點「➤ 導航」開啟 Google 地圖。想看電車＋巴士版行程，點導覽列的「◀ 電車版」。</p>
+    <p>資料查證至 2026/9/26。注意：Times 那霸空港店營業時間網路上有 18:00 與 20:00 兩種說法，本頁採官方的 9:00–18:00，訂車時請再確認；燒肉金城營業時間各來源不一，請以訂位確認為準；租車價為官網牌價，實際以訂車頁為準。車程與停留時間為概略估計，受當天路況影響。</p>
+    <p>路線圖為示意圖，非實際比例；各段請點「導航」按鈕開啟 Google 地圖。想看電車＋巴士版行程，點導覽列的「◀ 電車版」。</p>
   </footer>
 </div>
+
+<script>
+(function(){
+  var bar = document.getElementById('progress');
+  function onScroll(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+  }
+  document.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav a[href^="#"]'));
+  var map = {};
+  links.forEach(function(a){ map[a.getAttribute('href').slice(1)] = a; });
+  if ('IntersectionObserver' in window){
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting && map[e.target.id]){
+          links.forEach(function(a){ a.classList.remove('on'); });
+          map[e.target.id].classList.add('on');
+        }
+      });
+    }, {rootMargin:'-30% 0px -60% 0px'});
+    Object.keys(map).forEach(function(id){
+      var el = document.getElementById(id);
+      if (el) obs.observe(el);
+    });
+  }
+})();
+</script>
 </body>
 </html>
