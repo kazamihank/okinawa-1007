@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>沖繩那霸一日行｜2026.10.07</title>
+<meta name="description" content="2026/10/7 台北—那霸虎航當天來回：三種方案路線圖、燒肉餐廳預約、交通與預算">
+<meta name="theme-color" content="#06344c">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<style>
+  :root{
+    --sea-deep:#07425f; --sea:#0b7a99; --sunset:#e56b32; --coral:#c8452c;
+    --sand:#f6f2e8; --paper:#fffdf8; --ink:#22333c; --ink-soft:#5b6d76;
+    --line:#dcd4c2; --ok:#2c7a4b; --badge-bg:#fdeee3;
+    --map-sea:#d7eaf0; --map-land:#f3eee1; --map-rail:#9aa8ad;
+    --shadow:0 2px 10px rgba(34,51,60,.08);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --sea-deep:#9fd4e8; --sea:#5fb6cf; --sunset:#f28b52; --coral:#f08a75;
+      --sand:#131c21; --paper:#1b262d; --ink:#e8e4d8; --ink-soft:#a3b1b8;
+      --line:#33424b; --ok:#6fc491; --badge-bg:#3a2a20;
+      --map-sea:#0f2b36; --map-land:#22303a; --map-rail:#5a6b73;
+      --shadow:0 2px 10px rgba(0,0,0,.4);
+      color-scheme: dark;
+    }
+  }
+
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--sand); color:var(--ink);
+    font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+    font-size:15px; line-height:1.75;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:880px; margin:0 auto; padding:0 16px 72px;}
+  h1,h2,h3{font-family:"Noto Serif TC","Noto Sans TC",serif; text-wrap:balance;}
+  a{color:var(--sea);}
+  section{margin-top:44px; scroll-margin-top:66px;}
+
+  /* ===== 手機置頂導覽 ===== */
+  .nav{
+    position:sticky; top:0; z-index:50;
+    background:var(--sand);
+    border-bottom:1px solid var(--line);
+    display:flex; gap:8px; overflow-x:auto; -webkit-overflow-scrolling:touch;
+    padding:10px 16px calc(10px);
+    scrollbar-width:none;
+  }
+  .nav::-webkit-scrollbar{display:none;}
+  .nav a{
+    flex:0 0 auto; font-size:13px; font-weight:700; text-decoration:none;
+    color:var(--ink); background:var(--paper); border:1px solid var(--line);
+    border-radius:18px; padding:6px 15px; line-height:1.4; white-space:nowrap;
+  }
+  .nav a.hot{color:#fff; background:var(--sea); border-color:var(--sea);}
+
+  /* ===== Hero ===== */
+  .hero{
+    background:linear-gradient(168deg,#06344c 0%,#0b6183 55%,#0e7f97 100%);
+    color:#f4f9fb; padding:44px 20px 34px;
+  }
+  .hero-in{max-width:880px; margin:0 auto;}
+  .kicker{letter-spacing:.32em; font-size:11px; text-transform:uppercase; color:#bfe3ee; margin:0 0 10px;}
+  .hero h1{font-size:clamp(30px,7vw,46px); font-weight:900; margin:0 0 6px; letter-spacing:.06em;}
+  .hero .sub{font-size:14px; color:#d8edf4; margin:0 0 24px;}
+  .route{display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+    font-family:"Noto Serif TC",serif; font-weight:700; font-size:16px;}
+  .route .dotline{flex:1 1 40px; min-width:34px; height:2px;
+    background:repeating-linear-gradient(90deg,#9fd4e8 0 8px,transparent 8px 16px); position:relative;}
+  .route .dotline::after{content:"✈"; position:absolute; right:-4px; top:-13px; font-size:13px; color:#ffdcae;}
+  .route small{display:block; font-family:"Noto Sans TC",sans-serif; font-weight:400; font-size:11px; color:#bfe3ee; letter-spacing:.05em;}
+  .hero-meta{display:flex; gap:8px 20px; flex-wrap:wrap; margin-top:22px; font-size:13px; color:#d8edf4;}
+  .hero-meta b{color:#ffdcae; font-weight:700;}
+
+  /* ===== 章節標題 ===== */
+  .sec-head{display:flex; align-items:baseline; gap:12px; border-bottom:3px solid var(--sea); padding-bottom:8px; margin-bottom:20px;}
+  .sec-head .no{font-family:"Noto Serif TC",serif; font-size:13px; letter-spacing:.2em; color:var(--sea); font-weight:700;}
+  .sec-head h2{font-size:21px; margin:0; font-weight:700;}
+  .sec-head .en{margin-left:auto; font-size:10px; letter-spacing:.2em; color:var(--ink-soft); text-transform:uppercase;}
+  .lead{color:var(--ink-soft); margin:0 0 16px; max-width:64ch; font-size:14px;}
+
+  /* ===== 卡片 ===== */
+  .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px;}
+  .card{background:var(--paper); border:1px solid var(--line); border-radius:6px; padding:16px 18px; box-shadow:var(--shadow);}
+  .card h3{margin:0 0 8px; font-size:16px;}
+  .card p{margin:0; font-size:14px;}
+
+  /* ===== 航班 ===== */
+  .flight{display:flex; align-items:center; gap:12px; flex-wrap:wrap;}
+  .flight .code{font-family:"Noto Serif TC",serif; font-weight:900; font-size:19px; color:var(--sea-deep);}
+  .flight .t{font-variant-numeric:tabular-nums; font-size:21px; font-weight:700;}
+  .flight .apt{font-size:11px; color:var(--ink-soft); display:block;}
+  .flight .arrow{color:var(--sunset); font-size:17px;}
+
+  .notice{border-left:4px solid var(--sunset); background:var(--badge-bg); padding:11px 14px; border-radius:0 6px 6px 0; font-size:14px; margin-top:14px;}
+  .notice.red{border-left-color:var(--coral);}
+  .notice b{color:var(--coral);}
+  .notice.ok{border-left-color:var(--ok);}
+  .notice.ok b{color:var(--ok);}
+
+  /* ===== 方案 ===== */
+  .plan{background:var(--paper); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); margin-top:24px; overflow:hidden; scroll-margin-top:66px;}
+  .plan-head{padding:16px 18px 12px; border-bottom:1px dashed var(--line); display:flex; gap:12px; align-items:center; flex-wrap:wrap;}
+  .plan-tag{font-family:"Noto Serif TC",serif; font-weight:900; font-size:14px; color:#fff; background:var(--sea); border-radius:4px; padding:4px 12px; letter-spacing:.1em;}
+  .plan.alt .plan-tag{background:var(--sunset);}
+  .plan.rain .plan-tag{background:var(--ink-soft);}
+  .plan-head h3{margin:0; font-size:18px;}
+  .plan-head .for{font-size:13px; color:var(--ink-soft); flex-basis:100%;}
+
+  /* 路線圖 */
+  .plan-map{padding:14px 18px 4px;}
+  .plan-map svg{width:100%; height:auto; display:block;}
+  .plan-map .cap{font-size:12px; color:var(--ink-soft); margin:6px 0 0; display:flex; gap:8px 16px; flex-wrap:wrap; align-items:center;}
+  .cap .sw{display:inline-block; width:22px; height:0; border-top:3px solid var(--sea); vertical-align:middle; margin-right:6px; border-radius:2px;}
+  .cap .sw.o{border-top-color:var(--sunset);}
+  .cap .sw.rail{border-top:3px dashed var(--map-rail);}
+  .gmap-all{display:inline-block; margin:10px 18px 4px; font-size:13px; font-weight:700; color:var(--sea); text-decoration:none; border:1.5px solid var(--sea); border-radius:20px; padding:7px 16px;}
+  .plan.alt .gmap-all{color:var(--sunset); border-color:var(--sunset);}
+
+  /* SVG 樣式 */
+  .m-land{fill:var(--map-land);}
+  .m-sea{fill:var(--map-sea);}
+  .m-rail{stroke:var(--map-rail); stroke-width:2.5; stroke-dasharray:1 6; stroke-linecap:round; fill:none;}
+  .m-st{fill:var(--map-rail);}
+  .m-lb{font-family:"Noto Sans TC",sans-serif; font-size:10.5px; fill:var(--ink); font-weight:500;}
+  .m-lb.soft{fill:var(--ink-soft); font-size:9.5px;}
+  .m-poi{fill:var(--coral);}
+  .rA{stroke:var(--sea); stroke-width:3; fill:none; stroke-linecap:round;}
+  .rB{stroke:var(--sunset); stroke-width:3; fill:none; stroke-linecap:round;}
+  #arw-a path{fill:var(--sea);}
+  #arw-b path{fill:var(--sunset);}
+  .stepA circle{fill:var(--sea);}
+  .stepB circle{fill:var(--sunset);}
+  .stepA text,.stepB text{fill:#fff; font-size:10px; font-weight:700; text-anchor:middle; font-family:"Noto Sans TC",sans-serif;}
+
+  /* 時間軸 */
+  .timeline{list-style:none; margin:0; padding:18px 18px;}
+  .timeline li{display:grid; grid-template-columns:56px 14px 1fr; gap:0 12px; position:relative; padding-bottom:18px;}
+  .timeline li:last-child{padding-bottom:2px;}
+  .timeline .tt{font-variant-numeric:tabular-nums; font-weight:700; font-size:14px; color:var(--sea-deep); text-align:right; line-height:1.5;}
+  .timeline .nd{position:relative;}
+  .timeline .nd::before{content:""; position:absolute; left:5px; top:6px; width:8px; height:8px; border-radius:50%; background:var(--sunset); border:2px solid var(--paper); box-shadow:0 0 0 1px var(--sunset);}
+  .timeline li:not(:last-child) .nd::after{content:""; position:absolute; left:10px; top:20px; bottom:-6px; width:2px; background:var(--line);}
+  .timeline .tx b{font-size:15px;}
+  .timeline .tx{font-size:14px;}
+  .timeline .tx .how{color:var(--ink-soft); font-size:13px;}
+  .meal .nd::before{background:var(--coral); box-shadow:0 0 0 1px var(--coral);}
+  .maplink{display:inline-block; font-size:12px; font-weight:700; text-decoration:none; color:var(--sea);
+    border:1px solid var(--sea); border-radius:13px; padding:2px 11px; margin:2px 0 2px 6px; white-space:nowrap;}
+  .maplink::before{content:"➤ "; font-size:10px;}
+
+  /* ===== 餐廳 ===== */
+  .r-card{background:var(--paper); border:1px solid var(--line); border-radius:6px; padding:16px 18px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:8px;}
+  .r-top{display:flex; align-items:flex-start; gap:10px; flex-wrap:wrap;}
+  .r-top h3{margin:0; font-size:16px; flex:1 1 auto;}
+  .badge{font-size:11px; font-weight:700; letter-spacing:.08em; border-radius:3px; padding:2px 8px; white-space:nowrap;}
+  .badge.book{background:var(--coral); color:#fff;}
+  .badge.walkin{background:var(--ok); color:#fff;}
+  .badge.closed{background:var(--ink-soft); color:#fff;}
+  .r-meta{font-size:13px; color:var(--ink-soft); display:grid; grid-template-columns:4.5em 1fr; gap:2px 8px; margin:0;}
+  .r-meta dt{font-weight:700; color:var(--ink);}
+  .r-meta dd{margin:0;}
+  .r-note{font-size:13px; border-top:1px dashed var(--line); padding-top:8px;}
+  .grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:14px;}
+
+  /* ===== 表格 ===== */
+  .t-wrap{overflow-x:auto; background:var(--paper); border:1px solid var(--line); border-radius:6px; box-shadow:var(--shadow);}
+  table{border-collapse:collapse; width:100%; min-width:480px; font-size:14px;}
+  th,td{padding:10px 13px; text-align:left; border-bottom:1px solid var(--line); vertical-align:top;}
+  th{background:var(--sea); color:#fff; font-weight:700; white-space:nowrap;}
+  tr:last-child td{border-bottom:none;}
+  td.num{font-variant-numeric:tabular-nums; white-space:nowrap;}
+
+  .check{list-style:none; padding:0; margin:0; display:grid; gap:10px;}
+  .check li{background:var(--paper); border:1px solid var(--line); border-radius:6px; padding:12px 15px 12px 42px; position:relative; font-size:14px; box-shadow:var(--shadow);}
+  .check li::before{content:"✓"; position:absolute; left:15px; top:12px; color:var(--sunset); font-weight:900;}
+
+  .foot{margin-top:52px; border-top:1px solid var(--line); padding-top:16px; font-size:12px; color:var(--ink-soft);}
+  .foot p{margin:0 0 8px; max-width:72ch;}
+
+  /* ===== 手機微調 ===== */
+  @media (max-width:480px){
+    body{font-size:14.5px;}
+    .hero{padding:34px 18px 28px;}
+    .hero-meta{font-size:12px;}
+    .sec-head .en{display:none;}
+    .timeline{padding:16px 14px;}
+    .timeline li{grid-template-columns:48px 12px 1fr; gap:0 10px;}
+    .flight{gap:8px;}
+    .flight .t{font-size:19px;}
+  }
+  @media (prefers-reduced-motion: reduce){ *{animation:none!important; transition:none!important; scroll-behavior:auto!important;} }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-in">
+    <p class="kicker">One-Day Escape · Okinawa</p>
+    <h1>沖繩那霸一日行</h1>
+    <p class="sub">2026 年 10 月 7 日（星期三）・台灣虎航當天來回・不自駕，全程單軌電車＋巴士</p>
+    <div class="route">
+      <span>台北 桃園<small>TPE 第一航廈</small></span>
+      <span class="dotline"></span>
+      <span>沖繩 那霸<small>OKA 國際線</small></span>
+      <span class="dotline"></span>
+      <span>台北 桃園<small>22:10 抵達</small></span>
+    </div>
+    <div class="hero-meta">
+      <span>機票來回含稅 <b>NT$8,878</b></span>
+      <span>落地可玩 <b>約 12 小時</b></span>
+      <span>當日日落 <b>18:10</b></span>
+      <span>10 月均溫 <b>25.5°C</b></span>
+    </div>
+  </div>
+</header>
+
+<nav class="nav" aria-label="快速跳轉">
+  <a href="#flights">航班</a>
+  <a href="#planA" class="hot">方案 A</a>
+  <a href="#planB">方案 B</a>
+  <a href="#planC">雨天版</a>
+  <a href="#food">美食</a>
+  <a href="#transport">交通</a>
+  <a href="#policy">免稅</a>
+  <a href="#budget">預算</a>
+  <a href="#checklist">行前</a>
+</nav>
+
+<div class="wrap">
+
+  <!-- 航班 -->
+  <section id="flights">
+    <div class="sec-head"><span class="no">01</span><h2>航班</h2><span class="en">Flights</span></div>
+    <div class="cards">
+      <div class="card">
+        <div class="flight">
+          <span class="code">IT230</span>
+          <span><span class="t">06:50</span><span class="apt">桃園 T1 出發</span></span>
+          <span class="arrow">→</span>
+          <span><span class="t">09:20</span><span class="apt">那霸抵達</span></span>
+        </div>
+        <p style="margin-top:10px;">去程。04:40–04:50 抵達桃園報到（06:05 關櫃），凌晨機捷來不及，請先約好計程車或叫車。</p>
+      </div>
+      <div class="card">
+        <div class="flight">
+          <span class="code">IT233</span>
+          <span><span class="t">21:40</span><span class="apt">那霸出發</span></span>
+          <span class="arrow">→</span>
+          <span><span class="t">22:10</span><span class="apt">桃園 T1 抵達</span></span>
+        </div>
+        <p style="margin-top:10px;">回程。19:30 前抵達那霸機場國際線（有託運 19:10 前）。</p>
+      </div>
+    </div>
+    <div class="notice ok">
+      <b>時刻已確認：</b>虎航官網 10/7 的 IT233 表定 21:40 出發，來回含稅總價 NT$8,878／人（僅含手提行李）。廉航票價隨時浮動，人數確定就下訂。
+    </div>
+    <div class="notice red">
+      <b>延誤提醒：</b>IT233 近期準點率僅約 37%、平均延誤 46 分鐘，回到桃園可能接近午夜——回台北的計程車先想好。10 月是颱風季尾聲，出發前 3–5 天起每天關注日本氣象廳路徑與虎航航班公告。
+    </div>
+  </section>
+
+  <!-- 方案總覽 -->
+  <section id="plans">
+    <div class="sec-head"><span class="no">02</span><h2>三種玩法，投票選一個</h2><span class="en">Choose Your Plan</span></div>
+    <p class="lead">主要差別在「燒肉排中午還是晚上」和「夕陽在哪裡看」。方案 A 行程最順、夕陽最美；方案 B 晚餐吃得最好但時間較緊；下雨就走方案 C。每段交通都附 Google 地圖連結（➤），點開就能導航。</p>
+
+    <!-- 方案 A -->
+    <article class="plan" id="planA">
+      <div class="plan-head">
+        <span class="plan-tag">方案 A</span>
+        <h3>燒肉午餐 × 瀨長島夕陽（推薦）</h3>
+        <span class="for">適合：想看海景夕陽、行程想排最順的人。全程單軌＋TK02 巴士，零計程車。</span>
+      </div>
+
+      <div class="plan-map">
+        <svg viewBox="0 0 380 305" role="img" aria-label="方案 A 路線圖：機場、縣廳前、首里城、牧志、赤嶺、瀨長島，箭頭標示行進方向">
+          <defs>
+            <marker id="arw-a" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+              <path d="M0,0 L10,5 L0,10 Z"/>
+            </marker>
+          </defs>
+          <rect x="0" y="0" width="380" height="305" class="m-land"/>
+          <path class="m-sea" d="M0,0 L55,0 C48,60 52,120 62,180 C66,205 50,235 58,260 L120,305 L0,305 Z"/>
+          <ellipse cx="82" cy="266" rx="15" ry="10" class="m-land" stroke="var(--map-rail)" stroke-width="1"/>
+          <path class="m-rail" d="M78,205 L108,215 L145,172 L168,150 L192,130 L220,114 L244,80 Q292,58 322,100"/>
+          <text x="252" y="52" class="m-lb soft">ゆいレール 單軌</text>
+          <circle cx="78" cy="205" r="4" class="m-st"/><text x="30" y="196" class="m-lb">那霸機場</text>
+          <circle cx="108" cy="215" r="3" class="m-st"/><text x="112" y="228" class="m-lb soft">赤嶺</text>
+          <circle cx="168" cy="150" r="4" class="m-st"/><text x="118" y="141" class="m-lb">縣廳前</text>
+          <circle cx="220" cy="114" r="3.5" class="m-st"/><text x="226" y="108" class="m-lb">牧志</text>
+          <circle cx="322" cy="100" r="4" class="m-st"/><text x="332" y="98" class="m-lb">首里</text>
+          <rect x="326" y="122" width="9" height="9" class="m-poi" transform="rotate(45 330 126)"/><text x="340" y="132" class="m-lb">首里城</text>
+          <rect x="212" y="126" width="8" height="8" class="m-poi" transform="rotate(45 216 130)"/><text x="222" y="152" class="m-lb soft">牧志市場</text>
+          <text x="60" y="290" class="m-lb">瀨長島</text>
+          <text x="14" y="120" class="m-lb soft">東海</text>
+          <path class="rA" d="M84,203 C114,211 140,196 160,160" marker-end="url(#arw-a)"/>
+          <path class="rA" d="M176,146 C230,138 280,128 316,112" marker-end="url(#arw-a)"/>
+          <path class="rA" d="M324,134 C300,192 260,188 228,142" marker-end="url(#arw-a)"/>
+          <path class="rA" d="M208,130 C166,148 134,178 115,206" marker-end="url(#arw-a)"/>
+          <path class="rA" d="M103,222 C96,238 92,248 90,256" marker-end="url(#arw-a)"/>
+          <path class="rA" d="M74,258 C68,240 68,226 74,214" marker-end="url(#arw-a)"/>
+          <g class="stepA"><circle cx="122" cy="203" r="8"/><text x="122" y="206.5">1</text></g>
+          <g class="stepA"><circle cx="248" cy="124" r="8"/><text x="248" y="127.5">2</text></g>
+          <g class="stepA"><circle cx="286" cy="178" r="8"/><text x="286" y="181.5">3</text></g>
+          <g class="stepA"><circle cx="148" cy="168" r="8"/><text x="148" y="171.5">4</text></g>
+          <g class="stepA"><circle cx="107" cy="243" r="8"/><text x="107" y="246.5">5</text></g>
+          <g class="stepA"><circle cx="58" cy="234" r="8"/><text x="58" y="237.5">6</text></g>
+        </svg>
+        <p class="cap">
+          <span><span class="sw"></span>行進路線（1→6）</span>
+          <span><span class="sw rail"></span>單軌電車</span>
+          <span>1 午餐燒肉 → 2 首里城 → 3 牧志購物 → 4 赤嶺轉巴士 → 5 瀨長島夕陽 → 6 回機場</span>
+        </p>
+      </div>
+      <a class="gmap-all" href="https://www.google.com/maps/dir/那覇空港/焼肉もとぶ牧場+那覇店/首里城公園/第一牧志公設市場/瀬長島ウミカジテラス/那覇空港国際線ターミナル" target="_blank" rel="noopener">在 Google 地圖開啟方案 A 全程路線 ↗</a>
+
+      <ul class="timeline">
+        <li><span class="tt">09:20</span><span class="nd"></span><span class="tx"><b>抵達那霸機場</b><br><span class="how">Visit Japan Web QR 入境，約 10:15 出關；機場站買單軌一日券 ¥1,000</span></span></li>
+        <li><span class="tt">10:35</span><span class="nd"></span><span class="tx"><b>縣廳前站・國際通西段散步</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=那覇空港駅&destination=県庁前駅&travelmode=transit" target="_blank" rel="noopener">地圖</a><br><span class="how">單軌約 13 分；順便看看 10/10 那霸大綱挽的宣傳布置</span></span></li>
+        <li class="meal"><span class="tt">11:30</span><span class="nd"></span><span class="tx"><b>午餐：燒肉本部牧場 那霸店</b>（需預約）<a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=県庁前駅&destination=焼肉もとぶ牧場+那覇店&travelmode=walking" target="_blank" rel="noopener">地圖</a><br><span class="how">縣廳前站步行 2 分；牧場直營沖繩黑毛和牛「本部牛」，午餐套餐 ¥1,900 起</span></span></li>
+        <li><span class="tt">13:15</span><span class="nd"></span><span class="tx"><b>首里城公園</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=県庁前駅&destination=首里城公園&travelmode=transit" target="_blank" rel="noopener">地圖</a><br><span class="how">單軌至首里站＋步行 15 分；正殿 11/23 才開放入內，這天看全新朱紅外觀與展望台，收費區 ¥400（出示一日券 ¥320）</span></span></li>
+        <li><span class="tt">15:20</span><span class="nd"></span><span class="tx"><b>牧志公設市場・平和通・國際通購物</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=首里城公園&destination=第一牧志公設市場&travelmode=transit" target="_blank" rel="noopener">地圖</a><br><span class="how">單軌至牧志站；免稅為舊制，出示護照結帳直接免稅（同店稅前滿 ¥5,000）</span></span></li>
+        <li><span class="tt">16:45</span><span class="nd"></span><span class="tx"><b>前往瀨長島</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=牧志駅&destination=赤嶺駅&travelmode=transit" target="_blank" rel="noopener">單軌</a><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=赤嶺駅&destination=瀬長島ウミカジテラス&travelmode=transit" target="_blank" rel="noopener">TK02</a><br><span class="how">單軌至赤嶺站，南口轉東京巴士 TK02（¥150，約 12 分）。平日無機場直達班次</span></span></li>
+        <li><span class="tt">17:30</span><span class="nd"></span><span class="tx"><b>瀨長島 Umikaji Terrace・18:10 看夕陽</b><br><span class="how">白色階梯商店街、飛機低空起降；小吃：きじむなぁ塔可飯、鮪魚丼</span></span></li>
+        <li><span class="tt">18:23</span><span class="nd"></span><span class="tx"><b>TK02 直達那霸機場</b>（備案 18:58 班次）<a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=瀬長島ウミカジテラス&destination=那覇空港国際線ターミナル&travelmode=transit" target="_blank" rel="noopener">地圖</a><br><span class="how">¥250、約 20 分；18:43 抵達機場，報到出境後可在管制區休息</span></span></li>
+        <li><span class="tt">21:40</span><span class="nd"></span><span class="tx"><b>IT233 起飛 → 22:10 回桃園</b></span></li>
+      </ul>
+    </article>
+
+    <!-- 方案 B -->
+    <article class="plan alt" id="planB">
+      <div class="plan-head">
+        <span class="plan-tag">方案 B</span>
+        <h3>燒肉晚餐 × 波上宮夕陽</h3>
+        <span class="for">適合：晚餐想吃頂級燒肉套餐（¥6,900 起）的人。捨棄瀨長島，時間比 A 緊，回程班機延誤風險要多留意。</span>
+      </div>
+
+      <div class="plan-map">
+        <svg viewBox="0 0 380 305" role="img" aria-label="方案 B 路線圖：機場、首里城、牧志、波上宮、縣廳前，箭頭標示行進方向">
+          <defs>
+            <marker id="arw-b" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+              <path d="M0,0 L10,5 L0,10 Z"/>
+            </marker>
+          </defs>
+          <rect x="0" y="0" width="380" height="305" class="m-land"/>
+          <path class="m-sea" d="M0,0 L55,0 C48,60 52,120 62,180 C66,205 50,235 58,260 L120,305 L0,305 Z"/>
+          <ellipse cx="82" cy="266" rx="15" ry="10" class="m-land" stroke="var(--map-rail)" stroke-width="1"/>
+          <path class="m-rail" d="M78,205 L108,215 L145,172 L168,150 L192,130 L220,114 L244,80 Q292,58 322,100"/>
+          <text x="252" y="52" class="m-lb soft">ゆいレール 單軌</text>
+          <circle cx="78" cy="205" r="4" class="m-st"/><text x="30" y="196" class="m-lb">那霸機場</text>
+          <circle cx="168" cy="150" r="4" class="m-st"/><text x="178" y="166" class="m-lb">縣廳前</text>
+          <circle cx="220" cy="114" r="3.5" class="m-st"/><text x="226" y="108" class="m-lb">牧志</text>
+          <circle cx="322" cy="100" r="4" class="m-st"/><text x="332" y="98" class="m-lb">首里</text>
+          <rect x="326" y="122" width="9" height="9" class="m-poi" transform="rotate(45 330 126)"/><text x="340" y="132" class="m-lb">首里城</text>
+          <rect x="126" y="96" width="9" height="9" class="m-poi" transform="rotate(45 130 100)"/><text x="104" y="90" class="m-lb">波上宮</text>
+          <text x="60" y="290" class="m-lb soft">瀨長島</text>
+          <text x="14" y="120" class="m-lb soft">東海</text>
+          <path class="rB" d="M84,199 C150,148 250,96 312,106" marker-end="url(#arw-b)"/>
+          <path class="rB" d="M323,133 C296,158 258,146 231,121" marker-end="url(#arw-b)"/>
+          <path class="rB" d="M211,110 C185,101 162,97 143,99" marker-end="url(#arw-b)"/>
+          <path class="rB" d="M131,108 C140,122 150,132 159,140" marker-end="url(#arw-b)"/>
+          <path class="rB" d="M161,159 C130,183 100,197 88,202" marker-end="url(#arw-b)"/>
+          <g class="stepB"><circle cx="188" cy="128" r="8"/><text x="188" y="131.5">1</text></g>
+          <g class="stepB"><circle cx="280" cy="152" r="8"/><text x="280" y="155.5">2</text></g>
+          <g class="stepB"><circle cx="176" cy="94" r="8"/><text x="176" y="97.5">3</text></g>
+          <g class="stepB"><circle cx="136" cy="126" r="8"/><text x="136" y="129.5">4</text></g>
+          <g class="stepB"><circle cx="120" cy="186" r="8"/><text x="120" y="189.5">5</text></g>
+        </svg>
+        <p class="cap">
+          <span><span class="sw o"></span>行進路線（1→5）</span>
+          <span><span class="sw rail"></span>單軌電車</span>
+          <span>1 首里城 → 2 牧志午餐購物 → 3 波上宮夕陽 → 4 縣廳前燒肉晚餐 → 5 回機場</span>
+        </p>
+      </div>
+      <a class="gmap-all" href="https://www.google.com/maps/dir/那覇空港/首里城公園/第一牧志公設市場/波上宮/焼肉もとぶ牧場+那覇店/那覇空港国際線ターミナル" target="_blank" rel="noopener">在 Google 地圖開啟方案 B 全程路線 ↗</a>
+
+      <ul class="timeline">
+        <li><span class="tt">10:20</span><span class="nd"></span><span class="tx"><b>單軌直奔首里城</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=那覇空港駅&destination=首里城公園&travelmode=transit" target="_blank" rel="noopener">地圖</a><br><span class="how">機場站買一日券後直達首里站，約 30 分</span></span></li>
+        <li class="meal"><span class="tt">12:30</span><span class="nd"></span><span class="tx"><b>午餐：牧志公設市場 2 樓食堂 或 首里そば</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=首里城公園&destination=首里そば&travelmode=walking" target="_blank" rel="noopener">首里そば</a><br><span class="how">首里そば 11:30 開門、賣完收攤、只收現金；想吃就得排在午餐第一波</span></span></li>
+        <li><span class="tt">13:30</span><span class="nd"></span><span class="tx"><b>牧志市場・平和通・國際通購物</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=首里駅&destination=第一牧志公設市場&travelmode=transit" target="_blank" rel="noopener">地圖</a><br><span class="how">整個下午慢慢逛，含 DFS（單軌おもろまち站，週三營業至 21:00）</span></span></li>
+        <li><span class="tt">17:30</span><span class="nd"></span><span class="tx"><b>波上宮・波之上海灘看 18:10 日落</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=県庁前駅&destination=波上宮&travelmode=walking" target="_blank" rel="noopener">地圖</a><br><span class="how">縣廳前站步行約 15 分；那霸市區唯一海濱神社，紅色本殿立於崖上</span></span></li>
+        <li class="meal"><span class="tt">18:30</span><span class="nd"></span><span class="tx"><b>晚餐：燒肉本部牧場 或 琉球の牛</b>（需預約）<a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=波上宮&destination=焼肉もとぶ牧場+那覇店&travelmode=walking" target="_blank" rel="noopener">地圖</a><br><span class="how">兩家都在縣廳前—牧志之間；套餐 ¥4,000–8,400，60–70 分鐘內吃完</span></span></li>
+        <li><span class="tt">19:40</span><span class="nd"></span><span class="tx"><b>縣廳前站單軌回機場</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=県庁前駅&destination=那覇空港駅&travelmode=transit" target="_blank" rel="noopener">地圖</a><br><span class="how">約 13 分，19:55 抵達；這是壓線時間，餐廳務必準時離開</span></span></li>
+        <li><span class="tt">21:40</span><span class="nd"></span><span class="tx"><b>IT233 起飛 → 22:10 回桃園</b></span></li>
+      </ul>
+    </article>
+
+    <!-- 方案 C -->
+    <article class="plan rain" id="planC">
+      <div class="plan-head">
+        <span class="plan-tag">方案 C</span>
+        <h3>雨天備案・室內版</h3>
+        <span class="for">下雨或颱風外圍環流：取消首里城戶外區與瀨長島，改走騎樓與室內。動線都在單軌沿線，不需要路線圖。</span>
+      </div>
+      <a class="gmap-all" href="https://www.google.com/maps/dir/那覇空港/焼肉もとぶ牧場+那覇店/第一牧志公設市場/Tギャラリア沖縄+by+DFS/しゃぶしゃぶ我那覇豚肉店+前島本店/那覇空港" target="_blank" rel="noopener">在 Google 地圖開啟方案 C 全程路線 ↗</a>
+      <ul class="timeline">
+        <li class="meal"><span class="tt">11:30</span><span class="nd"></span><span class="tx"><b>午餐：燒肉本部牧場 那霸店</b>（預約照舊）<a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=那覇空港駅&destination=焼肉もとぶ牧場+那覇店&travelmode=transit" target="_blank" rel="noopener">地圖</a></span></li>
+        <li><span class="tt">13:00</span><span class="nd"></span><span class="tx"><b>有頂棚商店街</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=焼肉もとぶ牧場+那覇店&destination=第一牧志公設市場&travelmode=walking" target="_blank" rel="noopener">地圖</a><br><span class="how">平和通、市場本通、牧志公設市場，全程不淋雨</span></span></li>
+        <li><span class="tt">15:30</span><span class="nd"></span><span class="tx"><b>おもろまち T Galleria by DFS</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=牧志駅&destination=Tギャラリア沖縄+by+DFS&travelmode=transit" target="_blank" rel="noopener">地圖</a><br><span class="how">單軌站直結；免稅品可約機場提貨</span></span></li>
+        <li class="meal"><span class="tt">17:30</span><span class="nd"></span><span class="tx"><b>晚餐：我那覇豚肉店 阿古豬涮涮鍋</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=おもろまち駅&destination=しゃぶしゃぶ我那覇豚肉店+前島本店&travelmode=transit" target="_blank" rel="noopener">地圖</a><br><span class="how">美榮橋站 1 分；晚餐時段限定「阿古豬三種比較」，吃完直接單軌回機場</span></span></li>
+        <li><span class="tt">19:15</span><span class="nd"></span><span class="tx"><b>美榮橋站單軌回機場</b><a class="maplink" href="https://www.google.com/maps/dir/?api=1&origin=美栄橋駅&destination=那覇空港駅&travelmode=transit" target="_blank" rel="noopener">地圖</a><br><span class="how">約 14 分；颱風天大眾運輸若停駛，提早到機場最保險</span></span></li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- 餐廳 -->
+  <section id="food">
+    <div class="sec-head"><span class="no">03</span><h2>美食名單（燒肉優先）</h2><span class="en">Where to Eat</span></div>
+    <p class="lead">10/7 是星期三——傑克牛排、識名園、福州園都公休，名單已剔除。標紅色「需預約」的店，訂好位再出發。</p>
+    <div class="grid2">
+      <div class="r-card">
+        <div class="r-top"><h3>燒肉本部牧場 那霸店</h3><span class="badge book">需預約</span></div>
+        <dl class="r-meta">
+          <dt>類型</dt><dd>沖繩黑毛和牛「本部牛」燒肉・牧場直營</dd>
+          <dt>位置</dt><dd>縣廳前站步行 2 分</dd>
+          <dt>時間</dt><dd>午餐 11:30–15:00／晚餐至 22:00（不定休）</dd>
+          <dt>價位</dt><dd>午餐 ¥1,900 起；晚餐套餐 ¥6,900／¥8,400</dd>
+        </dl>
+        <p class="r-note">本行程第一主打。TableCheck 有英文頁面可線上訂位，也可電話 098-943-3897。午餐天天客滿，開門 11:30 就進場。出發前一週再確認當天有開（不定休）。</p>
+      </div>
+      <div class="r-card">
+        <div class="r-top"><h3>琉球の牛 那覇國際通</h3><span class="badge book">需預約</span></div>
+        <dl class="r-meta">
+          <dt>類型</dt><dd>精選 A5 沖繩縣產和牛燒肉・炙燒和牛壽司</dd>
+          <dt>位置</dt><dd>牧志站／美榮橋站各約 4 分</dd>
+          <dt>時間</dt><dd>僅晚餐 16:30–23:00（午餐暫停、無公休）</dd>
+          <dt>價位</dt><dd>約 ¥4,000–5,000</dd>
+        </dl>
+        <p class="r-note">方案 B 晚餐備案。官網或食べログ可訂位，16:30 開門直接吃第一輪最不用等。</p>
+      </div>
+      <div class="r-card">
+        <div class="r-top"><h3>しゃぶしゃぶ我那覇豚肉店 前島本店</h3><span class="badge walkin">建議訂位</span></div>
+        <dl class="r-meta">
+          <dt>類型</dt><dd>阿古豬涮涮鍋（アグー豚しゃぶしゃぶ）</dd>
+          <dt>位置</dt><dd>美榮橋站步行 1 分</dd>
+          <dt>時間</dt><dd>午 11:30–15:00／晚 17:00–23:00（週日休，10/7 有開）</dd>
+          <dt>價位</dt><dd>中價位，套餐約 ¥3,000–5,000</dd>
+        </dl>
+        <p class="r-note">雨天備案晚餐。晚餐限定「阿古豬三種比較」：やんばるあぐー、島豚あぐー、純種阿古豬一次吃齊。Hot Pepper 或電話 098-863-5380。</p>
+      </div>
+      <div class="r-card">
+        <div class="r-top"><h3>豚ホルモン我那覇焼肉店</h3><span class="badge book">需預約</span></div>
+        <dl class="r-meta">
+          <dt>類型</dt><dd>阿古豬燒肉・島豬內臟</dd>
+          <dt>位置</dt><dd>美榮橋站步行 6 分</dd>
+          <dt>時間</dt><dd>僅晚餐 17:00–23:00（不定休）</dd>
+          <dt>價位</dt><dd>平均 ¥4,000；100 分鐘吃喝到飽 ¥4,483</dd>
+        </dl>
+        <p class="r-note">想吃「豬肉燒肉」選這家。注意：遲到 15 分鐘自動取消、當天 17:00 後取消會收費。</p>
+      </div>
+      <div class="r-card">
+        <div class="r-top"><h3>首里そば</h3><span class="badge walkin">免預約</span></div>
+        <dl class="r-meta">
+          <dt>類型</dt><dd>手打沖繩麵名店</dd>
+          <dt>位置</dt><dd>首里站步行 5 分</dd>
+          <dt>時間</dt><dd>11:30–14:00，賣完即收（週四・日休）</dd>
+          <dt>價位</dt><dd>¥600–1,000，只收現金</dd>
+        </dl>
+        <p class="r-note">方案 B 午餐選項，配首里城剛好。不接受預約，開門前到最保險。</p>
+      </div>
+      <div class="r-card">
+        <div class="r-top"><h3>ポーたま 牧志市場店</h3><span class="badge walkin">免預約</span></div>
+        <dl class="r-meta">
+          <dt>類型</dt><dd>豬肉蛋飯糰（沖繩國民早餐）</dd>
+          <dt>位置</dt><dd>牧志市場旁</dd>
+          <dt>時間</dt><dd>7:00–20:00 全年無休</dd>
+          <dt>價位</dt><dd>¥400–900</dd>
+        </dl>
+        <p class="r-note">逛市場時的點心場。早上 8–10 點最擠，下午去排隊短很多。</p>
+      </div>
+      <div class="r-card">
+        <div class="r-top"><h3>Jack's Steak House</h3><span class="badge closed">週三公休</span></div>
+        <dl class="r-meta">
+          <dt>類型</dt><dd>老字號美式牛排</dd>
+        </dl>
+        <p class="r-note">10/7 星期三公休，這趟吃不到。想吃牛排的話，Steak House 88 國際通店全年無休（11:00–23:00，Ebica 可線上訂位）。</p>
+      </div>
+      <div class="r-card">
+        <div class="r-top"><h3>什麼是「阿古豬」？</h3></div>
+        <p class="r-note" style="border-top:none; padding-top:0;">アグー（Agu）是沖繩原生的琉球在來黑豬，祖先約 600 年前自中國傳入，戰後一度瀕臨絕種，靠回交復育回來。市面上的「あぐー」多為阿古豬公豬與西洋豬的混血品牌豬（縣認證），菜單寫「純粋アグー」才是純種。特色是脂肪甘甜、胺基酸豐富，切薄片涮著吃（しゃぶしゃぶ＝涮涮鍋）最能吃出油脂的甜。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 交通 -->
+  <section id="transport">
+    <div class="sec-head"><span class="no">04</span><h2>當地交通</h2><span class="en">Getting Around</span></div>
+    <div class="cards">
+      <div class="card">
+        <h3>單軌電車一日券 ¥1,000</h3>
+        <p>購買後 24 小時內全線不限次數搭乘，機場站售票機直接買。首里城收費區出示可折為 ¥320。機場→縣廳前約 13 分、→牧志約 16 分、→首里約 30 分。</p>
+      </div>
+      <div class="card">
+        <h3>東京巴士 TK02（瀨長島線）</h3>
+        <p>赤嶺站南口 ⇄ 瀨長島，¥150、約 12 分；回程直達機場 ¥250、約 20 分。傍晚回程參考班次 <b>18:23／18:58／19:28</b>（約 2026 年 5 月資料）。機場直達的 TK04 只在週末行駛，週三沒有。可感應信用卡或付現。</p>
+      </div>
+      <div class="card">
+        <h3>天氣與穿著</h3>
+        <p>10 月上旬均溫 25.5°C（28°C／23.5°C），仍是短袖天。帶：薄防曬外套、折疊傘、好走的鞋（首里城石板坡）、太陽眼鏡。日落 18:10。</p>
+      </div>
+    </div>
+    <div class="notice">TK02 時刻表有多個版本流通，出發前請到東京巴士沖繩營業所官網核對最新平日時刻，傍晚也常因塞車誤點——18:23 沒搭上還有 18:58 這班保底。</div>
+  </section>
+
+  <!-- 購物政策 / 活動 -->
+  <section id="policy">
+    <div class="sec-head"><span class="no">05</span><h2>免稅・政策・當天活動</h2><span class="en">Good to Know</span></div>
+    <div class="t-wrap">
+      <table>
+        <tr><th>項目</th><th>10/7 當天的狀態</th></tr>
+        <tr><td><b>免稅購物</b></td><td>適用<b>舊制</b>：出示護照，結帳直接以稅前價購買；同店同日稅前滿 ¥5,000，消耗品密封袋出境前不可拆。新制（先付稅、出境退稅）11/1 才上路，這趟用不到。</td></tr>
+        <tr><td><b>出國稅</b></td><td>2026/7/1 起調漲為 ¥3,000／次，已含在機票稅費中，不用另外繳。</td></tr>
+        <tr><td><b>JESTA 電子旅行授權</b></td><td>尚未實施（目標 2028 年度），這趟不用申請，照常填 Visit Japan Web 即可。</td></tr>
+        <tr><td><b>沖繩住宿稅</b></td><td>2027/2/1 才開徵，當天來回完全無關。</td></tr>
+        <tr><td><b>當天祭典</b></td><td>10/7 那霸<b>沒有大型活動</b>。那霸大綱挽祭在 10/10–10/12（主場拔河 10/11），國際通當天可能已見宣傳旗幟；首里城復興祭則在 11/1–11/3。</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- 預算 -->
+  <section id="budget">
+    <div class="sec-head"><span class="no">06</span><h2>預算（每人）</h2><span class="en">Budget</span></div>
+    <div class="t-wrap">
+      <table>
+        <tr><th>項目</th><th class="num">日圓</th><th class="num">約合新台幣</th></tr>
+        <tr><td>機票（虎航來回含稅，僅手提行李）</td><td class="num">—</td><td class="num">8,878</td></tr>
+        <tr><td>台北 ⇄ 桃園機場（凌晨＋深夜車資）</td><td class="num">—</td><td class="num">1,500–2,500</td></tr>
+        <tr><td>單軌一日券＋TK02 巴士</td><td class="num">¥1,400–1,600</td><td class="num">300–340</td></tr>
+        <tr><td>首里城收費區（一日券折扣）</td><td class="num">¥320</td><td class="num">70</td></tr>
+        <tr><td>燒肉午餐（方案 A）</td><td class="num">¥2,500–4,000</td><td class="num">530–840</td></tr>
+        <tr><td>晚餐＋小吃</td><td class="num">¥2,500–3,500</td><td class="num">530–740</td></tr>
+        <tr><td><b>合計（不含購物）</b></td><td class="num"><b>—</b></td><td class="num"><b>約 11,800–13,400</b></td></tr>
+      </table>
+    </div>
+    <p class="lead" style="margin-top:10px;">匯率以 ¥1 ≈ NT$0.21 估算。方案 B 晚餐改吃 ¥6,900–8,400 套餐約再加 NT$900–1,300。現金備 ¥10,000–15,000（首里そば、市場攤販只收現金）。</p>
+  </section>
+
+  <!-- 行前清單 -->
+  <section id="checklist">
+    <div class="sec-head"><span class="no">07</span><h2>行前待辦</h2><span class="en">Checklist</span></div>
+    <ul class="check">
+      <li><b>下訂機票</b>：官網已確認 10/7 IT230 06:50 去／IT233 21:40 回、來回含稅 NT$8,878——人數確定就買，可加購延誤險。</li>
+      <li><b>訂燒肉</b>：方案定案後，用 TableCheck 訂本部牧場（A 案 11:30／B 案 18:30），並存電話 098-943-3897，出發前一週確認當天有開。</li>
+      <li><b>Visit Japan Web</b>：入境＋海關資料填好、QR 截圖；eSIM 或漫遊開通。</li>
+      <li><b>約凌晨車</b>：預約 03:45 左右從台北出發的計程車／叫車；回程若延誤到午夜，機捷已收班，備好叫車方案。</li>
+      <li><b>核對 TK02 時刻</b>：出發前開東京巴士沖繩官網最新平日時刻表 PDF。</li>
+      <li><b>看颱風</b>：出發前 3–5 天起每天看日本氣象廳路徑圖與虎航「最新運航狀況」，出發前一晚再查一次。</li>
+      <li><b>帶現金 ¥10,000–15,000</b>＋可感應付款的信用卡；護照正本（免稅必用）。</li>
+    </ul>
+  </section>
+
+  <footer class="foot">
+    <p>資料查證至 2026/9/25：IT233 時刻與票價已於虎航官網確認（21:40／來回含稅 NT$8,878）；TK02 班次為約 2026 年 5 月資料、餐廳營業時間綜合官網／Tabelog／Hot Pepper。出發前請再確認：TK02 最新時刻表、本部牧場當日營業（不定休）。</p>
+    <p>路線圖為示意圖，非實際比例；各段路線請點「➤ 地圖」開啟 Google 地圖導航。首里城正殿內部 2026/11/23 起開放；牧志公設市場公休為每月第四個週日（10/25），10/7 正常營業。</p>
+  </footer>
+</div>
+</body>
+</html>
