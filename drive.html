@@ -63,7 +63,7 @@
     background:linear-gradient(90deg,var(--color-primary),var(--color-secondary)); }
 
   /* ===== Aurora hero ===== */
-  .hero{position:relative; overflow:hidden; padding:calc(var(--sp-8) + 8px) 20px var(--sp-6);
+  .hero{position:relative; overflow:hidden; padding:calc(var(--sp-8) + 8px) var(--sp-2) var(--sp-6);
     background:var(--color-background);}
   .hero .blob{position:absolute; border-radius:50%; filter:blur(70px); opacity:.55; pointer-events:none;}
   .b1{width:420px;height:420px; background:#FDBA74; top:-160px; left:-120px; animation:drift 11s ease-in-out infinite alternate;}
@@ -73,7 +73,7 @@
     .b1{background:#7C2D12; opacity:.5;} .b2{background:#155E75; opacity:.5;} .b3{background:#78350F; opacity:.45;}
   }
   @keyframes drift{from{transform:translate(0,0) scale(1);}to{transform:translate(40px,24px) scale(1.08);}}
-  .hero-in{position:relative; max-width:880px; margin:0 auto;}
+  .hero-in{position:relative; max-width:848px; margin:0 auto;}
   .chip{display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:700;
     background:var(--color-card); border:1px solid var(--color-border); border-radius:999px;
     padding:8px 16px; box-shadow:var(--shadow-1); color:var(--color-muted-foreground);}
@@ -93,7 +93,7 @@
     backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
     border-bottom:1px solid var(--color-border);
     display:flex; gap:var(--sp-1); overflow-x:auto; -webkit-overflow-scrolling:touch;
-    padding:10px var(--sp-2); scrollbar-width:none;}
+    padding:10px max(var(--sp-2), calc((100% - 880px) / 2 + var(--sp-2))); scrollbar-width:none;}
   .nav::-webkit-scrollbar{display:none;}
   .nav a{flex:0 0 auto; display:inline-flex; align-items:center; min-height:44px;
     font-size:14px; font-weight:700; text-decoration:none; cursor:pointer;
